@@ -239,4 +239,4 @@ Flutter              | 8.0.8.0        | Wireless |
 + [Restu Wahyu Saputra](https://github.com/restuwahyu13)
 
 ### LICENSE:
-+ [MIT]()
++ [MIT](https://github.com/restuwahyu13/bangjago-emulator/blob/main/LICENSE.MD)
