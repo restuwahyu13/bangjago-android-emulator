@@ -97,7 +97,7 @@ Flutter              | 8.0.8.0        | Wireless |
   Android 29           | google_apis    | x86_64      |
   Android 30           | google_apis    | x86         |
   Android 30           | google_apis    | x86_64      |
-  
+
 + #### Default System Images
 
   Android API Version  | Target Version | CPU Version |
@@ -132,7 +132,7 @@ Flutter              | 8.0.8.0        | Wireless |
   Android 28           | default        | x86_64      |
   Android 30           | default        | x86         |
   Android 30           | default        | x86_64      |
-  
+
 + #### TV System Images
 
   Android API Version  | Target Version | CPU Version |
@@ -148,7 +148,7 @@ Flutter              | 8.0.8.0        | Wireless |
   Android 27           | android-tv     | x86         |
   Android 28           | android-tv     | x86         |
   Android 29           | android-tv     | x86         |
-  
+
 + #### Wear OS System Images
 
   Android API Version  | Target Version | CPU Version |
@@ -159,7 +159,7 @@ Flutter              | 8.0.8.0        | Wireless |
   Android 25           | android-wear   | armeabi-v7a |
   Android 26           | android-wear   | x86         |
   Android 28           | android-wear   | x86         |
-  
+
 + #### Google Playstore System Images
 
   Android API Version  | Target Version | CPU Version |
@@ -174,13 +174,13 @@ Flutter              | 8.0.8.0        | Wireless |
   Android 29           | google_apis_playstore  | x86_64  |
   Android 30           | google_apis_playstore  | x86     |
   Android 30           | google_apis_playstore  | x86_64  |
-  
+
 
 ### Skin Device List:
 
 + #### Default Phone Device
 
-   Name                   |  Ram    |  CPU Cores | Internal Storage | 
+   Name                   |  Ram    |  CPU Cores | Internal Storage |
   ----------------------- | ------- | ---------- |  --------------- |
   2.7_QVGA                | 1024 MB | 1 Core     | 2048 MB          |
   2.7_QVGA_slider         | 1024 MB | 1 Core     | 2048 MB          |
@@ -213,10 +213,10 @@ Flutter              | 8.0.8.0        | Wireless |
   Pixel_3a                | 2048 MB | 1 Core     | 4096 MB          |
   Pixel_3a_XL             | 2048 MB | 1 Core     | 4096 MB          |
   Pixel_XL                | 2048 MB | 1 Core     | 4096 MB          |
-  
+
   + #### Default Tablet Device
 
-   Name                   |  Ram    |  CPU Cores | Internal Storage | 
+   Name                   |  Ram    |  CPU Cores | Internal Storage |
   ----------------------- | ------- | ---------- |  --------------- |
   7_WSVGA_Tablet          | 1024 MB | 1 Core     | 2048 MB          |
   10.1_WXGA_Tablet        | 1024 MB | 1 Core     | 2048 MB          |
@@ -225,18 +225,21 @@ Flutter              | 8.0.8.0        | Wireless |
   Nexus_9                 | 2048 Mb | 1 Core     | 4096 MB          |
   Nexus_10                | 2048 Mb | 1 Core     | 4096 MB          |
   Pixel_C                 | 2048 Mb | 1 Core     | 4096 MB          |
-  
+
     + #### Default TV Device
 
-   Name                   |  Ram    |  CPU Cores | Internal Storage | 
+   Name                   |  Ram    |  CPU Cores | Internal Storage |
   ----------------------- | ------- | ---------- |  --------------- |
   Android_Wear_Round      | 1024 MB | 1 Core     | 2048 MB          |
   Android_Wear_Round_Chin | 1024 MB | 1 Core     | 2048 MB          |
   Android_Wear_Square     | 1024 MB | 1 Core     | 2048 MB          |
-  
+
 
 ### Video Tutorial:
 + [Tutorial](https://bit.ly/2G5KUYR)
+
+### Buy A Cup Of Coffee
++ [Traktir Segelas Kopi](https://bit.ly/37KsgkB)
 
 ### Author:
 

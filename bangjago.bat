@@ -773,7 +773,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:123450 /m "silahkan pilih vendor image package ?"
+choice /n /c:123450 /m "please select vendor system-images version ?"
 
 :imageSdkList
 if %errorlevel% equ 1 goto googleImageList
@@ -811,7 +811,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:1234567890 /m "silahkan pilih jenis images package ?"
+choice /n /c:1234567890 /m "please select android sdk version ?"
 
 if %errorlevel% equ 1 goto jellyBeanListGoogle
 if %errorlevel% equ 2 goto kitkatListGoogle
@@ -849,7 +849,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:1234560 /m "silahkan pilih version image package ?"
+choice /n /c:1234560 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto jellyBean41x86g
 if %errorlevel% equ 2 goto jellyBean42x86g
@@ -1072,7 +1072,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto kitkat44x86g
 if %errorlevel% equ 2 goto kitkat44Armv7ag
@@ -1167,7 +1167,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:1234560 /m "silahkan pilih version image package ?"
+choice /n /c:1234560 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto lolipop50x86g
 if %errorlevel% equ 2 goto lolipop51x86g
@@ -1391,7 +1391,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:1230 /m "silahkan pilih version image package ?"
+choice /n /c:1230 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto marsmallow60x86g
 if %errorlevel% equ 2 goto marsmallow60x86_64g
@@ -1519,7 +1519,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:1234560 /m "silahkan pilih version image package ?"
+choice /n /c:1234560 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto nouget70x86g
 if %errorlevel% equ 2 goto nouget71x86g
@@ -1744,7 +1744,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:12340 /m "silahkan pilih version image package ?"
+choice /n /c:12340 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto oreo80x86g
 if %errorlevel% equ 2 goto oreo81x86g
@@ -1900,7 +1900,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:10 /m "silahkan pilih version image package ?"
+choice /n /c:10 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto pie90x86_64g
 if %errorlevel% equ 2 goto googleImageList
@@ -1958,7 +1958,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto q100x86g
 if %errorlevel% equ 2 goto q100x86_64g
@@ -2049,7 +2049,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto r110x86g
 if %errorlevel% equ 2 goto r110x86_64g
@@ -2146,7 +2146,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:123456780 /m "silahkan pilih jenis images package ?"
+choice /n /c:123456780 /m "please select android sdk version ?"
 
 if %errorlevel% equ 1 goto jellyBeanListDefault
 if %errorlevel% equ 2 goto kitkatListDefault
@@ -2181,7 +2181,7 @@ echo  6. Jelly Bean - 4.3 - armeabi-v7a
 echo  0. Back
 echo off &echo.&echo off
 
-choice /n /c:1234560 /m "silahkan pilih version image package ?"
+choice /n /c:1234560 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto jellyBean41x86d
 if %errorlevel% equ 2 goto jellyBean42x86d
@@ -2404,7 +2404,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto kitkat44x86d
 if %errorlevel% equ 2 goto kitkat44Armv7ad
@@ -2499,7 +2499,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:1234560 /m "silahkan pilih version image package ?"
+choice /n /c:1234560 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto lolipop50x86d
 if %errorlevel% equ 2 goto lolipop51x86d
@@ -2723,7 +2723,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:1230 /m "silahkan pilih version image package ?"
+choice /n /c:1230 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto marsmallow60x86d
 if %errorlevel% equ 2 goto marsmallow60x86_64d
@@ -2850,7 +2850,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:123450 /m "silahkan pilih version image package ?"
+choice /n /c:123450 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto nouget70x86d
 if %errorlevel% equ 2 goto nouget71x86d
@@ -3042,7 +3042,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:12340 /m "silahkan pilih version image package ?"
+choice /n /c:12340 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto oreo80x86d
 if %errorlevel% equ 2 goto oreo81x86d
@@ -3199,7 +3199,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto pie90x86d
 if %errorlevel% equ 2 goto pie90x86_64d
@@ -3290,7 +3290,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto q100x86d
 if %errorlevel% equ 2 goto q100x86_64d
@@ -3385,7 +3385,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:1234560 /m "silahkan pilih jenis images package ?"
+choice /n /c:1234560 /m "please select android sdk version ?"
 
 if %errorlevel% equ 1 goto lolipopListTvA
 if %errorlevel% equ 2 goto marshmallowListTvA
@@ -3417,7 +3417,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:1230 /m "silahkan pilih version image package ?"
+choice /n /c:1230 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto lolipop50x86Tv
 if %errorlevel% equ 2 goto lolipop51x86Tv
@@ -3541,7 +3541,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto marsmallow60x86Tv
 if %errorlevel% equ 2 goto marsmallow60Armv7aTv
@@ -3632,7 +3632,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto nouget70x86Tv
 if %errorlevel% equ 2 goto nouget71x86Tv
@@ -3723,7 +3723,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto oreo80x86Tv
 if %errorlevel% equ 2 goto oreo81x86Tv
@@ -3813,7 +3813,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:10 /m "silahkan pilih version image package ?"
+choice /n /c:10 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto pie90x86Tv
 if %errorlevel% equ 2 goto tvImageList
@@ -3870,7 +3870,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:10 /m "silahkan pilih version image package ?"
+choice /n /c:10 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto q100x86Tv
 if %errorlevel% equ 2 goto tvImageList
@@ -3930,7 +3930,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:12340 /m "silahkan pilih jenis images package ?"
+choice /n /c:12340 /m "please select android sdk version ?"
 
 if %errorlevel% equ 1 goto marshmallowListWr
 if %errorlevel% equ 2 goto nougetListWr
@@ -3959,7 +3959,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto marshmallow60x86w
 if %errorlevel% equ 2 goto marshmallow60Armv7aw
@@ -4050,7 +4050,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto nouget71x86w
 if %errorlevel% equ 2 goto nouget71Armv7aw
@@ -4140,7 +4140,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:10 /m "silahkan pilih version image package ?"
+choice /n /c:10 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto oreo80x86w
 if %errorlevel% equ 2 goto wearImageList
@@ -4197,7 +4197,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:10 /m "silahkan pilih version image package ?"
+choice /n /c:10 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto pie90x86w
 if %errorlevel% equ 2 goto wearImageList
@@ -4258,7 +4258,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:123450 /m "silahkan pilih jenis images package ?"
+choice /n /c:123450 /m "please select android sdk version ?"
 
 if %errorlevel% equ 1 goto nougetListGp
 if %errorlevel% equ 2 goto oreoListGp
@@ -4288,7 +4288,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto nouget24x86gp
 if %errorlevel% equ 2 goto nouget25x86gp
@@ -4379,7 +4379,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto oreo80x86Gp
 if %errorlevel% equ 2 goto oreo81x86Gp
@@ -4470,7 +4470,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto pie90x86gp
 if %errorlevel% equ 2 goto pie90x86_64gp
@@ -4561,7 +4561,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto q100x86gp
 if %errorlevel% equ 2 goto q100x86_64gp
@@ -4652,7 +4652,7 @@ echo  0. Back
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-choice /n /c:120 /m "silahkan pilih version image package ?"
+choice /n /c:120 /m "please select type android sdk version ?"
 
 if %errorlevel% equ 1 goto r110x86gp
 if %errorlevel% equ 2 goto r110x86_64gp
