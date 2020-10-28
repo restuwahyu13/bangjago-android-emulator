@@ -133,18 +133,18 @@ rem echo========================================================================
 rem echo                                         SET CONFIG PACKAGE
 rem echo ==============================================================================================================
 :setConfig
-if exist "%systemdrive%\Program Files\Java\jdk1.8.0_261" (
+if exist "%JAVA_HOME%" (
   goto setConfigInside
 ) else (
-  msg %username% 'java jdk1.8.0_261 not installed'
+  msg %username% 'java jdk path environment variable is not exist'
   goto start
 )
 
 :setConfigInside
-if exist "%systemdrive%\Program Files\Android\Android Studio" (
+if exist "%ANDROID_HOME%" (
   goto setPathConfig
 ) else (
-  msg %username% 'android studio not installed'
+  msg %username% 'android sdk path environment variable is not exist'
   goto start
 )
 
@@ -279,7 +279,7 @@ echo off &echo.&echo off
 if exist "%localappdata%\bangjago-emulator" (
   goto setupLocalUsb
 ) else (
-  msg %username% 'bangjago emulator package not found'
+  msg %username% 'connected using usb debugging failed'
   goto start
 )
 
@@ -339,7 +339,7 @@ echo off &echo.&echo off
 if exist "%localappdata%\android" (
   goto setupReactNativeUsb
 ) else (
-  msg %username% 'android sdk package not found'
+  msg %username% 'connected using usb debugging failed'
   goto appStart
 )
 
@@ -399,7 +399,7 @@ echo off &echo.&echo off
 if exist "%localappdata%\android" (
   goto setupAnyUsb
 ) else (
-  msg %username% 'android sdk package not found'
+  msg %username% 'connected using usb debugging failed'
   goto appStart
 )
 
@@ -487,7 +487,7 @@ echo off &echo.&echo off
 if exist "%localappdata%\bangjago-emulator" (
   goto setupLocalWireless
 ) else (
-  msg %username% 'bangjago emulator package not found'
+  msg %username% 'connected using wireless failed'
   goto appStart
 )
 
@@ -548,7 +548,7 @@ echo off &echo.&echo off
 if exist "%localappdata%\bangjago-emulator" (
   goto setupReactNativeWireless
 ) else (
-  msg %username% 'android sdk package not found'
+  msg %username% 'connected using wireless failed'
   goto appStart
 )
 
@@ -609,7 +609,7 @@ echo off &echo.&echo off
 if exist "%localappdata%\bangjago-emulator" (
   goto setupAnyWireless
 ) else (
-  msg %username% 'android sdk package not found'
+  msg %username% 'connected using wireless failed'
   goto appStart
 )
 
@@ -5179,15 +5179,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionQvga
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\2.7_QVGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\google_apis\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\2.7_QVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\2.7_QVGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\google_apis\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\2.7_QVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\2.7_QVGA\config.ini) -replace 'AvdId=*.*','AvdId=2.7_QVGA_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\2.7_QVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\2.7_QVGA\config.ini) -replace 'AvdId=*.*','AvdId=2.7_QVGA_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\2.7_QVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\2.7_QVGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=2.7 QVGA API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\2.7_QVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\2.7_QVGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=2.7 QVGA API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\2.7_QVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\2.7_QVGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\2.7_QVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\2.7_QVGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\2.7_QVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\2.7_QVGA\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\platforms\android-19\skins\QVGA' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\2.7_QVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\2.7_QVGA\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\platforms\android-19\skins\QVGA' | Out-File -encoding ASCII %bangjago%\configs\phone\2.7_QVGA\config.ini"
 
   goto installImageQvga
 ) else (
@@ -5218,7 +5218,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\2.7_QVGA_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\2.7_QVGA\config.ini %userprofile%\.android\avd\2.7_QVGA_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\2.7_QVGA_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\2.7_QVGA\config.ini %userprofile%\.android\avd\2.7_QVGA_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -5414,15 +5414,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionQvgaS
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\2.7_QVGA_slider\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\2.7_QVGA_slider\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\2.7_QVGA_slider\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\2.7_QVGA_slider\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\2.7_QVGA_slider\config.ini) -replace 'AvdId=*.*','AvdId=2.7_Qvga_Slider_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\2.7_QVGA_slider\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\2.7_QVGA_slider\config.ini) -replace 'AvdId=*.*','AvdId=2.7_Qvga_Slider_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\2.7_QVGA_slider\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\2.7_QVGA_slider\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=2.7 Qvga Slider API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\2.7_QVGA_slider\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\2.7_QVGA_slider\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=2.7 Qvga Slider API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\2.7_QVGA_slider\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\2.7_QVGA_slider\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\2.7_QVGA_slider\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\2.7_QVGA_slider\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\2.7_QVGA_slider\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\2.7_QVGA_slider\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\platforms\android-19\skins\QVGA' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\2.7_QVGA_slider\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\2.7_QVGA_slider\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\platforms\android-19\skins\QVGA' | Out-File -encoding ASCII %bangjago%\configs\phone\2.7_QVGA_slider\config.ini"
 
   goto installImageQvgaS
 ) else (
@@ -5453,7 +5453,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\2.7_Qvga_Slider_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\2.7_QVGA_slider\config.ini %userprofile%\.android\avd\2.7_Qvga_Slider_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\2.7_Qvga_Slider_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\2.7_QVGA_slider\config.ini %userprofile%\.android\avd\2.7_Qvga_Slider_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -5649,15 +5649,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionQvgaA2
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.2_QVGA_ADP2\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.2_QVGA_ADP2\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.2_QVGA_ADP2\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\3.2_QVGA_ADP2\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.2_QVGA_ADP2\config.ini) -replace 'AvdId=*.*','AvdId=3.2_QVGA_ADP2_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.2_QVGA_ADP2\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.2_QVGA_ADP2\config.ini) -replace 'AvdId=*.*','AvdId=3.2_QVGA_ADP2_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.2_QVGA_ADP2\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.2_QVGA_ADP2\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=3.2 QVGA ADP2 API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.2_QVGA_ADP2\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.2_QVGA_ADP2\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=3.2 QVGA ADP2 API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.2_QVGA_ADP2\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.2_QVGA_ADP2\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.2_QVGA_ADP2\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.2_QVGA_ADP2\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.2_QVGA_ADP2\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.2_QVGA_ADP2\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\platforms\android-19\skins\QVGA' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.2_QVGA_ADP2\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.2_QVGA_ADP2\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\platforms\android-19\skins\QVGA' | Out-File -encoding ASCII %bangjago%\configs\phone\3.2_QVGA_ADP2\config.ini"
 
   goto installImageQvgaA2
 ) else (
@@ -5688,7 +5688,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\3.2_QVGA_ADP2_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\3.2_QVGA_ADP2\config.ini %userprofile%\.android\avd\3.2_QVGA_ADP2_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\3.2_QVGA_ADP2_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\3.2_QVGA_ADP2\config.ini %userprofile%\.android\avd\3.2_QVGA_ADP2_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -5911,13 +5911,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionWqvga33
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.3_WQVGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.3_WQVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.3_WQVGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\3.3_WQVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.3_WQVGA\config.ini) -replace 'AvdId=*.*','AvdId=3.3_WQVGA_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.3_WQVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.3_WQVGA\config.ini) -replace 'AvdId=*.*','AvdId=3.3_WQVGA_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.3_WQVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.3_WQVGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=3.3 WQVGA API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.3_WQVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.3_WQVGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=3.3 WQVGA API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.3_WQVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.3_WQVGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.3_WQVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.3_WQVGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.3_WQVGA\config.ini"
 
   goto installImageWqvga33
 ) else (
@@ -5948,7 +5948,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\3.3_WQVGA_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\3.3_WQVGA\config.ini %userprofile%\.android\avd\3.3_WQVGA_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\3.3_WQVGA_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\3.3_WQVGA\config.ini %userprofile%\.android\avd\3.3_WQVGA_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -6144,13 +6144,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionWqvga34
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.4_WQVGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.4_WQVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.4_WQVGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\3.4_WQVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.4_WQVGA\config.ini) -replace 'AvdId=*.*','AvdId=3.4_WQVGA_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.4_WQVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.4_WQVGA\config.ini) -replace 'AvdId=*.*','AvdId=3.4_WQVGA_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.4_WQVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.4_WQVGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=3.4 WQVGA API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.4_WQVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.4_WQVGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=3.4 WQVGA API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.4_WQVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.4_WQVGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.4_WQVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.4_WQVGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.4_WQVGA\config.ini"
 
   goto installImageWqvga34
 ) else (
@@ -6181,7 +6181,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\3.4_WQVGA_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\3.4_WQVGA\config.ini %userprofile%\.android\avd\3.4_WQVGA_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\3.4_WQVGA_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\3.4_WQVGA\config.ini %userprofile%\.android\avd\3.4_WQVGA_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -6404,13 +6404,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionFwvgaS
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.7_FWVGA_slider\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.7_FWVGA_slider\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.7_FWVGA_slider\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\3.7_FWVGA_slider\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.7_FWVGA_slider\config.ini) -replace 'AvdId=*.*','AvdId=3.7_FWVGA_slider_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.7_FWVGA_slider\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.7_FWVGA_slider\config.ini) -replace 'AvdId=*.*','AvdId=3.7_FWVGA_slider_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.7_FWVGA_slider\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.7_FWVGA_slider\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=3.7 FWVGA slider API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.7_FWVGA_slider\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.7_FWVGA_slider\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=3.7 FWVGA slider API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.7_FWVGA_slider\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.7_FWVGA_slider\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.7_FWVGA_slider\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.7_FWVGA_slider\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.7_FWVGA_slider\config.ini"
 
   goto installImageFwvgaS
 ) else (
@@ -6441,7 +6441,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\3.7_FWVGA_slider_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\3.7_FWVGA_slider\config.ini %userprofile%\.android\avd\3.7_FWVGA_slider_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\3.7_FWVGA_slider_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\3.7_FWVGA_slider\config.ini %userprofile%\.android\avd\3.7_FWVGA_slider_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -6636,13 +6636,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionFwvgaD
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\5.4_FWVGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\5.4_FWVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\5.4_FWVGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\5.4_FWVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\5.4_FWVGA\config.ini) -replace 'AvdId=*.*','AvdId=5.4_FWVGA_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\5.4_FWVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\5.4_FWVGA\config.ini) -replace 'AvdId=*.*','AvdId=5.4_FWVGA_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\5.4_FWVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\5.4_FWVGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=5.4 FWVGA API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\5.4_FWVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\5.4_FWVGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=5.4 FWVGA API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\5.4_FWVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\5.4_FWVGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\5.4_FWVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\5.4_FWVGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\5.4_FWVGA\config.ini"
 
   goto installImageFwvgaD
 ) else (
@@ -6673,7 +6673,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\5.4_FWVGA_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\5.4_FWVGA\config.ini %userprofile%\.android\avd\5.4_FWVGA_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\5.4_FWVGA_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\5.4_FWVGA\config.ini %userprofile%\.android\avd\5.4_FWVGA_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -6900,13 +6900,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionWvga47
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\4.7_WXGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\4.7_WXGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\4.7_WXGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\4.7_WXGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\4.7_WXGA\config.ini) -replace 'AvdId=*.*','AvdId=4.7_WXGA_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\4.7_WXGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\4.7_WXGA\config.ini) -replace 'AvdId=*.*','AvdId=4.7_WXGA_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\4.7_WXGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\4.7_WXGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=4.7_WXGA_API API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\4.7_WXGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\4.7_WXGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=4.7_WXGA_API API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\4.7_WXGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\4.7_WXGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\4.7_WXGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\4.7_WXGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\4.7_WXGA\config.ini"
 
   goto installImageWvga47
 ) else (
@@ -6937,7 +6937,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\4.7_WXGA_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\4.7_WXGA\config.ini %userprofile%\.android\avd\4.7_WXGA_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\4.7_WXGA_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\4.7_WXGA\config.ini %userprofile%\.android\avd\4.7_WXGA_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -7133,13 +7133,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionWvga51
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\5.1_WVGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\5.1_WVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\5.1_WVGA\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\5.1_WVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\5.1_WVGA\config.ini) -replace 'AvdId=*.*','AvdId=5.1_WVGA_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\5.1_WVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\5.1_WVGA\config.ini) -replace 'AvdId=*.*','AvdId=5.1_WVGA_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\5.1_WVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\5.1_WVGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=5.1 WVGA API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\5.1_WVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\5.1_WVGA\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=5.1 WVGA API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\5.1_WVGA\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\5.1_WVGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\5.1_WVGA\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\5.1_WVGA\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\5.1_WVGA\config.ini"
 
   goto installImageWvga51
 ) else (
@@ -7170,7 +7170,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\5.1_WVGA_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\5.1_WVGA\config.ini %userprofile%\.android\avd\5.1_WVGA_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\5.1_WVGA_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\5.1_WVGA\config.ini %userprofile%\.android\avd\5.1_WVGA_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -7366,13 +7366,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionWvgaNo
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.7_WVGA_Nexus_One\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.7_WVGA_Nexus_One\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.7_WVGA_Nexus_One\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\3.7_WVGA_Nexus_One\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.7_WVGA_Nexus_One\config.ini) -replace 'AvdId=*.*','AvdId=3.7_WVGA_Nexus_One_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.7_WVGA_Nexus_One\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.7_WVGA_Nexus_One\config.ini) -replace 'AvdId=*.*','AvdId=3.7_WVGA_Nexus_One_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.7_WVGA_Nexus_One\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.7_WVGA_Nexus_One\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=3.7 WVGA Nexus One API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.7_WVGA_Nexus_One\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.7_WVGA_Nexus_One\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=3.7 WVGA Nexus One API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.7_WVGA_Nexus_One\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\3.7_WVGA_Nexus_One\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\3.7_WVGA_Nexus_One\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\3.7_WVGA_Nexus_One\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\3.7_WVGA_Nexus_One\config.ini"
 
   goto installImageWvgaNo
 ) else (
@@ -7403,7 +7403,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\3.7_WVGA_Nexus_One_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\3.7_WVGA_Nexus_One\config.ini %userprofile%\.android\avd\3.7_WVGA_Nexus_One_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\3.7_WVGA_Nexus_One_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\3.7_WVGA_Nexus_One\config.ini %userprofile%\.android\avd\3.7_WVGA_Nexus_One_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -7598,13 +7598,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionWvgaNs
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\4_WVGA_Nexus_S\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\4_WVGA_Nexus_S\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\4_WVGA_Nexus_S\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\4_WVGA_Nexus_S\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\4_WVGA_Nexus_S\config.ini) -replace 'AvdId=*.*','AvdId=4_WVGA_Nexus_S_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\4_WVGA_Nexus_S\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\4_WVGA_Nexus_S\config.ini) -replace 'AvdId=*.*','AvdId=4_WVGA_Nexus_S_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\4_WVGA_Nexus_S\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\4_WVGA_Nexus_S\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=4 WVGA Nexus S API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\4_WVGA_Nexus_S\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\4_WVGA_Nexus_S\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=4 WVGA Nexus S API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\4_WVGA_Nexus_S\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\4_WVGA_Nexus_S\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\4_WVGA_Nexus_S\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\4_WVGA_Nexus_S\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\4_WVGA_Nexus_S\config.ini"
 
   goto installImageWvgaNs
 ) else (
@@ -7635,7 +7635,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\4_WVGA_Nexus_S_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\4_WVGA_Nexus_S\config.ini %userprofile%\.android\avd\4_WVGA_Nexus_S_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\4_WVGA_Nexus_S_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\4_WVGA_Nexus_S\config.ini %userprofile%\.android\avd\4_WVGA_Nexus_S_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -7862,13 +7862,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionFdb73
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\7.3_Foldable\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\7.3_Foldable\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\7.3_Foldable\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\7.3_Foldable\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\7.3_Foldable\config.ini) -replace 'AvdId=*.*','AvdId=7.3_Foldable_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\7.3_Foldable\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\7.3_Foldable\config.ini) -replace 'AvdId=*.*','AvdId=7.3_Foldable_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\7.3_Foldable\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\7.3_Foldable\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=7.3 Foldable API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\7.3_Foldable\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\7.3_Foldable\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=7.3 Foldable API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\7.3_Foldable\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\7.3_Foldable\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\7.3_Foldable\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\7.3_Foldable\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\7.3_Foldable\config.ini"
 
   goto installImageFdb73
 ) else (
@@ -7905,7 +7905,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\7.3_Foldable_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\7.3_Foldable\config.ini %userprofile%\.android\avd\7.3_Foldable_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\7.3_Foldable_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\7.3_Foldable\config.ini %userprofile%\.android\avd\7.3_Foldable_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -8105,13 +8105,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionFdb83
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\google_apis\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\8_Foldable\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\google_apis\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\8_Foldable\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\8_Foldable\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\google_apis\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\8_Foldable\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\8_Foldable\config.ini) -replace 'AvdId=*.*','AvdId=8_Foldable_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\8_Foldable\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\8_Foldable\config.ini) -replace 'AvdId=*.*','AvdId=8_Foldable_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\8_Foldable\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\8_Foldable\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=8 Foldable API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\8_Foldable\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\8_Foldable\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=8 Foldable API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\8_Foldable\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\8_Foldable\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\8_Foldable\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\8_Foldable\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\8_Foldable\config.ini"
 
   goto installImageFdb83
 ) else (
@@ -8148,7 +8148,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\8_Foldable_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\8_Foldable\config.ini %userprofile%\.android\avd\8_Foldable_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\8_Foldable_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\8_Foldable\config.ini %userprofile%\.android\avd\8_Foldable_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -8382,15 +8382,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionNexusOne
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_One\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_One\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_One\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_One\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_One\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_One_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_One\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_One\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_One_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_One\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_One\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus One API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_One\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_One\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus One API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_One\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_One\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_One\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_One\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_One\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_One\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_one' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\nexus_one\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_One\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_one' | Out-File -encoding ASCII %bangjago%\configs\phone\nexus_one\config.ini"
 
   goto installImageNexusOne
 ) else (
@@ -8421,7 +8421,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Nexus_One_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Nexus_One\config.ini %userprofile%\.android\avd\Nexus_One_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Nexus_One_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Nexus_One\config.ini %userprofile%\.android\avd\Nexus_One_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -8616,15 +8616,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionNexusFour
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\google_apis\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\nexus_4\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\google_apis\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\nexus_4\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\nexus_4\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\google_apis\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\nexus_4\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\nexus_4\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_4_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\nexus_4\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\nexus_4\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_4_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\nexus_4\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\nexus_4\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 4 API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\nexus_4\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\nexus_4\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 4 API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\nexus_4\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\nexus_4\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\nexus_4\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\nexus_4\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\nexus_4\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\nexus_4\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_4' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\nexus_4\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\nexus_4\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_4' | Out-File -encoding ASCII %bangjago%\configs\phone\nexus_4\config.ini"
 
   goto installImageNexusFour
 ) else (
@@ -8655,7 +8655,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Nexus_4_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Nexus_4\config.ini %userprofile%\.android\avd\Nexus_4_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Nexus_4_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Nexus_4\config.ini %userprofile%\.android\avd\Nexus_4_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -8850,15 +8850,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionNexusFive
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\nexus_5\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\nexus_5\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\nexus_5\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\nexus_5\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\nexus_5\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_5_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\nexus_5\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\nexus_5\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_5_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\nexus_5\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\nexus_5\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 5 API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\nexus_5\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\nexus_5\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 5 API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\nexus_5\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\nexus_5\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\nexus_5\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\nexus_5\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\nexus_5\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\nexus_5\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_5' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\nexus_5\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\nexus_5\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_5' | Out-File -encoding ASCII %bangjago%\configs\phone\nexus_5\config.ini"
 
   goto installImageNexusFive
 ) else (
@@ -8889,7 +8889,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Nexus_5_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\nexus_5\config.ini %userprofile%\.android\avd\Nexus_5_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Nexus_5_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\nexus_5\config.ini %userprofile%\.android\avd\Nexus_5_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -9084,15 +9084,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionNexusFiveX
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_5X\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_5X\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_5X\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_5X\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_5X\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_5X_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_5X\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_5X\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_5X_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_5X\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_5X\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 5X API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_5X\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_5X\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 5X API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_5X\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_5X\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_5X\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_5X\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_5X\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_5X\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_5x' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_5X\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_5X\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_5x' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_5X\config.ini"
 
   goto installImageNexusFiveX
 ) else (
@@ -9123,7 +9123,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Nexus_5X_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Nexus_5X\config.ini %userprofile%\.android\avd\Nexus_5X_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Nexus_5X_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Nexus_5X\config.ini %userprofile%\.android\avd\Nexus_5X_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -9318,15 +9318,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionNexusSix
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_6\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_6\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_6\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_6\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_6\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_6_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_6\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_6\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_6_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_6\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_6\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 6 API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_6\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_6\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 6 API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_6\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_6\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_6\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_6\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_6\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_6\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_6' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_6\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_6\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_6' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_6\config.ini"
 
   goto installImageNexusSix
 ) else (
@@ -9357,7 +9357,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Nexus_6_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Nexus_6\config.ini %userprofile%\.android\avd\Nexus_6_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Nexus_6_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Nexus_6\config.ini %userprofile%\.android\avd\Nexus_6_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -9553,15 +9553,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionNexusSixP
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_6P\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_6P\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_6P\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_6P\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_6P\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_6P_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_6P\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_6P\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_6P_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_6P\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_6P\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 6P API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_6P\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_6P\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 6P API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_6P\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_6P\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_6P\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_6P\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_6P\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_6P\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_6p' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_6P\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_6P\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_6p' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_6P\config.ini"
 
   goto installImageNexusSixP
 ) else (
@@ -9592,7 +9592,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Nexus_6P_API_%androidVersion%.avd" replace %systemdrive%\bangjago\configs\phone\Nexus_6P\config.ini %userprofile%\.android\avd\Nexus_6P_API_%androidVersion%.avd
+if exist "%userprofile%\.android\avd\Nexus_6P_API_%androidVersion%.avd" replace %bangjago%\configs\phone\Nexus_6P\config.ini %userprofile%\.android\avd\Nexus_6P_API_%androidVersion%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -9788,17 +9788,17 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionNexusS
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_S\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_S\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_S_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_S\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_S_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_S\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus S API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_S\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus S API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_S\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_S\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_S\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_S\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_S\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_s' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Nexus_S\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_s' | Out-File -encoding ASCII %bangjago%\configs\phone\Nexus_S\config.ini"
 
   goto installImageNexusS
 ) else (
@@ -9829,7 +9829,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Nexus_S_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Nexus_S\config.ini %userprofile%\.android\avd\Nexus_S_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Nexus_S_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Nexus_S\config.ini %userprofile%\.android\avd\Nexus_S_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -10025,13 +10025,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionGalaxyNexus
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Galaxy_Nexus\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Galaxy_Nexus\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Galaxy_Nexus\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Galaxy_Nexus\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Galaxy_Nexus\config.ini) -replace 'AvdId=*.*','AvdId=Galaxy_Nexus_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Galaxy_Nexus\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Galaxy_Nexus\config.ini) -replace 'AvdId=*.*','AvdId=Galaxy_Nexus_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Galaxy_Nexus\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Galaxy_Nexus\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Galaxy Nexus API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Galaxy_Nexus\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Galaxy_Nexus\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Galaxy Nexus API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Galaxy_Nexus\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Galaxy_Nexus\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\galaxy_nexus' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Galaxy_Nexus\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Galaxy_Nexus\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\galaxy_nexus' | Out-File -encoding ASCII %bangjago%\configs\phone\Galaxy_Nexus\config.ini"
 
   goto installImageGalaxyNexus
 ) else (
@@ -10062,7 +10062,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Galaxy_Nexus_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Galaxy_Nexus\config.ini %userprofile%\.android\avd\Galaxy_Nexus_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Galaxy_Nexus_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Galaxy_Nexus\config.ini %userprofile%\.android\avd\Galaxy_Nexus_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -10297,15 +10297,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionPixel
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel\config.ini"
 
   goto installImagePixel
 ) else (
@@ -10336,7 +10336,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Pixel_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Pixel\config.ini %userprofile%\.android\avd\Pixel_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Pixel_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Pixel\config.ini %userprofile%\.android\avd\Pixel_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -10533,15 +10533,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionPixelXl
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_XL\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_XL\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_XL\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_XL_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_XL\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_XL_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_XL\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel XL API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_XL\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel XL API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_XL\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_XL\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_XL\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_xl_silver' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_XL\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_xl_silver' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_XL\config.ini"
 
   goto installImagePixelXl
 ) else (
@@ -10572,7 +10572,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Pixel_XL_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Pixel_XL\config.ini %userprofile%\.android\avd\Pixel_XL_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Pixel_XL_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Pixel_XL\config.ini %userprofile%\.android\avd\Pixel_XL_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -10768,15 +10768,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionPixelTwo
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_2\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_2\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_2\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_2\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_2\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_2_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_2\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_2\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_2_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_2\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_2\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 2 API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_2\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_2\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 2 API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_2\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_2\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_2\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_2\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_2\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_2\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_2' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_2\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_2\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_2' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_2\config.ini"
 
   goto installImagePixelTwo
 ) else (
@@ -10807,7 +10807,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Pixel_2_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Pixel_2\config.ini %userprofile%\.android\avd\Pixel_2_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Pixel_2_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Pixel_2\config.ini %userprofile%\.android\avd\Pixel_2_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -11003,15 +11003,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionPixelTwoXl
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_2_XL\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_2_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_2_XL\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_2_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_2_XL\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_2_XL_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_2_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_2_XL\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_2_XL_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_2_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_2_XL\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 2 XL %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_2_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_2_XL\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 2 XL %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_2_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_2_XL\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_2_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_2_XL\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_2_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_2_XL\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_2_xl' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_2_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_2_XL\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_2_xl' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_2_XL\config.ini"
 
   goto installImagePixelTwoXl
 ) else (
@@ -11042,7 +11042,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Pixel_2_XL_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Pixel_2_XL\config.ini %userprofile%\.android\avd\Pixel_2_XL_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Pixel_2_XL_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Pixel_2_XL\config.ini %userprofile%\.android\avd\Pixel_2_XL_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -11238,15 +11238,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionPixelThree
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_3_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_3_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 3 API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 3 API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_3' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_3' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3\config.ini"
 
   goto installImagePixelThree
 ) else (
@@ -11277,7 +11277,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Pixel_3_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Pixel_3\config.ini %userprofile%\.android\avd\Pixel_3_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Pixel_3_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Pixel_3\config.ini %userprofile%\.android\avd\Pixel_3_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -11473,15 +11473,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionPixelThreeXl
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3_XL\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3_XL\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3_XL\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_3_XL_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3_XL\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_3_XL_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3_XL\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 3 XL API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3_XL\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 3 XL API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3_XL\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3_XL\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3_XL\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_3_xl' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3_XL\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_3_xl' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3_XL\config.ini"
 
   goto installImagePixelThreeXl
 ) else (
@@ -11512,7 +11512,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Pixel_3_XL_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Pixel_3_XL\config.ini %userprofile%\.android\avd\Pixel_3_XL_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Pixel_3_XL_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Pixel_3_XL\config.ini %userprofile%\.android\avd\Pixel_3_XL_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -11708,13 +11708,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionPixelThreeA
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3a\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3a\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3a\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3a\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3a\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_3a_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3a\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3a\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_3a_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3a\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3a\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 3a API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3a\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3a\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 3a API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3a\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3a\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3a\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3a\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3a\config.ini"
 
   goto installImagePixelThreeA
 ) else (
@@ -11745,7 +11745,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Pixel_3a_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Pixel_3a\config.ini %userprofile%\.android\avd\Pixel_3a_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Pixel_3a_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Pixel_3a\config.ini %userprofile%\.android\avd\Pixel_3a_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -11941,15 +11941,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionPixelThreeAXl
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3a_XL\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3a_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3a_XL\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3a_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3a_XL\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_3a_XL_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3a_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3a_XL\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_3a_XL_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3a_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3a_XL\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 3a XL API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3a_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3a_XL\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel 3a XL API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3a_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3a_XL\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3a_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3a_XL\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3a_XL\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\phone\Pixel_3a_XL\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_xl_silver' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\phone\Pixel_3a_XL\config.ini"
+  powershell -Command "(gc %bangjago%\configs\phone\Pixel_3a_XL\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_xl_silver' | Out-File -encoding ASCII %bangjago%\configs\phone\Pixel_3a_XL\config.ini"
 
   goto installImagePixelThreeAXl
 ) else (
@@ -11980,7 +11980,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Pixel_3a_XL_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\phone\Pixel_3a_XL\config.ini %userprofile%\.android\avd\Pixel_3a_XL_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Pixel_3a_XL_API_%androidVersionInt%.avd" replace %bangjago%\configs\phone\Pixel_3a_XL\config.ini %userprofile%\.android\avd\Pixel_3a_XL_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -12230,13 +12230,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionWxgaTablet
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\10.1_WXGA_Tablet\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\10.1_WXGA_Tablet\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\10.1_WXGA_Tablet\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\tablet\10.1_WXGA_Tablet\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\10.1_WXGA_Tablet\config.ini) -replace 'AvdId=*.*','AvdId=10.1_WXGA_Tablet_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\10.1_WXGA_Tablet\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\10.1_WXGA_Tablet\config.ini) -replace 'AvdId=*.*','AvdId=10.1_WXGA_Tablet_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\10.1_WXGA_Tablet\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\10.1_WXGA_Tablet\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=10.1 WXGA (Tablet) API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\10.1_WXGA_Tablet\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\10.1_WXGA_Tablet\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=10.1 WXGA (Tablet) API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\10.1_WXGA_Tablet\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\10.1_WXGA_Tablet\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\10.1_WXGA_Tablet\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\10.1_WXGA_Tablet\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\tablet\10.1_WXGA_Tablet\config.ini"
 
   goto installImageWxgaTablet
 ) else (
@@ -12267,7 +12267,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\10.1_WXGA_Tablet_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\tablet\10.1_WXGA_Tablet\config.ini %userprofile%\.android\avd\10.1_WXGA_Tablet_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\10.1_WXGA_Tablet_API_%androidVersionInt%.avd" replace %bangjago%\configs\tablet\10.1_WXGA_Tablet\config.ini %userprofile%\.android\avd\10.1_WXGA_Tablet_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -12486,13 +12486,13 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionWsvgaTablet
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\7_WSVGA_Tablet\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\7_WSVGA_Tablet\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\7_WSVGA_Tablet\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\tablet\7_WSVGA_Tablet\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\7_WSVGA_Tablet\config.ini) -replace 'AvdId=*.*','AvdId=7_WSVGA_Tablet_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\7_WSVGA_Tablet\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\7_WSVGA_Tablet\config.ini) -replace 'AvdId=*.*','AvdId=7_WSVGA_Tablet_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\7_WSVGA_Tablet\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\7_WSVGA_Tablet\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=7_WSVGA_Tablet API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\7_WSVGA_Tablet\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\7_WSVGA_Tablet\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=7_WSVGA_Tablet API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\7_WSVGA_Tablet\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\7_WSVGA_Tablet\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\7_WSVGA_Tablet\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\7_WSVGA_Tablet\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\tablet\7_WSVGA_Tablet\config.ini"
 
   goto installImageWsvgaTablet
 ) else (
@@ -12523,7 +12523,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\7_WSVGA_Tablet_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\tablet\7_WSVGA_Tablet\config.ini %userprofile%\.android\avd\7_WSVGA_Tablet_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\7_WSVGA_Tablet_API_%androidVersionInt%.avd" replace %bangjago%\configs\tablet\7_WSVGA_Tablet\config.ini %userprofile%\.android\avd\7_WSVGA_Tablet_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -12748,15 +12748,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionNexus7
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\nexus_7\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\nexus_7\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\nexus_7\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\tablet\nexus_7\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\nexus_7\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_7_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\nexus_7\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\nexus_7\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_7_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\nexus_7\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\nexus_7\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 7 API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\nexus_7\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\nexus_7\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 7 API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\nexus_7\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\nexus_7\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\nexus_7\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\nexus_7\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\tablet\nexus_7\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\nexus_7\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_7_2013' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\nexus_7\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\nexus_7\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_7_2013' | Out-File -encoding ASCII %bangjago%\configs\tablet\nexus_7\config.ini"
 
   goto installImageNexus7
 ) else (
@@ -12787,7 +12787,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Nexus_7_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\tablet\nexus_7\config.ini %userprofile%\.android\avd\Nexus_7_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Nexus_7_API_%androidVersionInt%.avd" replace %bangjago%\configs\tablet\nexus_7\config.ini %userprofile%\.android\avd\Nexus_7_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -12981,15 +12981,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionNexus72012
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_7_2012\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_7_2012\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_7_2012\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_7_2012\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_7_2012\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_7_2012_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_7_2012\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_7_2012\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_7_2012_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_7_2012\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_7_2012\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 7 (2012) API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_7_2012\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_7_2012\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 7 (2012) API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_7_2012\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_7_2012\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_7_2012\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_7_2012\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_7_2012\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_7_2012\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_7' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_7_2012\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_7_2012\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_7' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_7_2012\config.ini"
 
   goto installImageNexus72012
 ) else (
@@ -13020,7 +13020,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Nexus_7_2012_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\tablet\Nexus_7_2012\config.ini %userprofile%\.android\avd\Nexus_7_2012_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Nexus_7_2012_API_%androidVersionInt%.avd" replace %bangjago%\configs\tablet\Nexus_7_2012\config.ini %userprofile%\.android\avd\Nexus_7_2012_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -13214,15 +13214,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionNexus9
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_9\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_9\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_9\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_9\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_9\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_9_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_9\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_9\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_9_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_9\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_9\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 9 API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_9\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_9\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 9 API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_9\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_9\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_9\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_9\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_9\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_9\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\Nexus_9' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_9\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_9\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\Nexus_9' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_9\config.ini"
 
   goto installImageNexus9
 ) else (
@@ -13253,7 +13253,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Nexus_9_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\tablet\Nexus_9\config.ini %userprofile%\.android\avd\Nexus_9_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Nexus_9_API_%androidVersionInt%.avd" replace %bangjago%\configs\tablet\Nexus_9\config.ini %userprofile%\.android\avd\Nexus_9_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -13447,15 +13447,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionNexus10
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_10\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_10\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_10\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_10\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_10\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_10_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_10\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_10\config.ini) -replace 'AvdId=*.*','AvdId=Nexus_10_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_10\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_10\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 10 API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_10\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_10\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Nexus 10 API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_10\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_10\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_10\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_10\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_10\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\Nexus_10\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_10' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\Nexus_10\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\Nexus_10\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\nexus_10' | Out-File -encoding ASCII %bangjago%\configs\tablet\Nexus_10\config.ini"
 
   goto installImageNexus10
 ) else (
@@ -13486,7 +13486,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Nexus_10_API_%androidVersionInt%.avd" replace %systemdrive%\bangjago\configs\tablet\Nexus_10\config.ini %userprofile%\.android\avd\Nexus_10_API_%androidVersionInt%.avd
+if exist "%userprofile%\.android\avd\Nexus_10_API_%androidVersionInt%.avd" replace %bangjago%\configs\tablet\Nexus_10\config.ini %userprofile%\.android\avd\Nexus_10_API_%androidVersionInt%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -13705,15 +13705,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionPixelc
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\pixel_c\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\pixel_c\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\pixel_c\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\tablet\pixel_c\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\pixel_c\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_C_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\pixel_c\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\pixel_c\config.ini) -replace 'AvdId=*.*','AvdId=Pixel_C_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\pixel_c\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\pixel_c\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel C API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\pixel_c\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\pixel_c\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Pixel C API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tablet\pixel_c\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\pixel_c\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\pixel_c\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\pixel_c\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\tablet\pixel_c\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tablet\pixel_c\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_c' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tablet\pixel_c\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tablet\pixel_c\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\pixel_c' | Out-File -encoding ASCII %bangjago%\configs\tablet\pixel_c\config.ini"
 
   goto installImagePixelc
 ) else (
@@ -13744,7 +13744,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Pixel_C_API_%androidVersion%.avd" replace %systemdrive%\bangjago\configs\tablet\Pixel_C\config.ini %userprofile%\.android\avd\Pixel_C_API_%androidVersion%.avd
+if exist "%userprofile%\.android\avd\Pixel_C_API_%androidVersion%.avd" replace %bangjago%\configs\tablet\Pixel_C\config.ini %userprofile%\.android\avd\Pixel_C_API_%androidVersion%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -13992,15 +13992,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionAwr
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Round\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Round\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round\config.ini) -replace 'AvdId=*.*','AvdId=Android_Wear_Round_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Round\config.ini) -replace 'AvdId=*.*','AvdId=Android_Wear_Round_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Round\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Android Wear Round API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Round\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Android Wear Round API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Round\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Round\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Round\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\system-images\android-25\android-wear\x86\skins\AndroidWearRound' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Round\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\system-images\android-25\android-wear\x86\skins\AndroidWearRound' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Round\config.ini"
 
   goto installImageAwr
 ) else (
@@ -14031,7 +14031,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Android_Wear_Round_API_%androidVersion%.avd" replace %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round\config.ini %userprofile%\.android\avd\Android_Wear_Round_API_%androidVersion%.avd
+if exist "%userprofile%\.android\avd\Android_Wear_Round_API_%androidVersion%.avd" replace %bangjago%\configs\WearOS\Android_Wear_Round\config.ini %userprofile%\.android\avd\Android_Wear_Round_API_%androidVersion%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -14250,15 +14250,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionAwrc
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round_Chin\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round_Chin\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Round_Chin\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Round_Chin\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round_Chin\config.ini) -replace 'AvdId=*.*','AvdId=Android_Wear_Round_Chin_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round_Chin\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Round_Chin\config.ini) -replace 'AvdId=*.*','AvdId=Android_Wear_Round_Chin_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Round_Chin\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round_Chin\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Android Wear Round Chin API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round_Chin\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Round_Chin\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Android Wear Round Chin API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Round_Chin\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round_Chin\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round_Chin\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Round_Chin\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Round_Chin\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round_Chin\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\system-images\android-25\android-wear\x86\skins\AndroidWearRoundChin320x290' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round_Chin\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Round_Chin\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\system-images\android-25\android-wear\x86\skins\AndroidWearRoundChin320x290' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Round_Chin\config.ini"
 
   goto installImageAwrc
 ) else (
@@ -14289,7 +14289,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Android_Wear_Round_Chin_API_%androidVersion%.avd" replace %systemdrive%\bangjago\configs\WearOS\Android_Wear_Round_Chin\config.ini %userprofile%\.android\avd\Android_Wear_Round_Chin_API_%androidVersion%.avd
+if exist "%userprofile%\.android\avd\Android_Wear_Round_Chin_API_%androidVersion%.avd" replace %bangjago%\configs\WearOS\Android_Wear_Round_Chin\config.ini %userprofile%\.android\avd\Android_Wear_Round_Chin_API_%androidVersion%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -14508,15 +14508,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionAws
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Square\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Square\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Square\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Square\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Square\config.ini) -replace 'AvdId=*.*','AvdId=Android_Wear_Square_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Square\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Square\config.ini) -replace 'AvdId=*.*','AvdId=Android_Wear_Square_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Square\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Square\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Android Wear Square API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Square\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Square\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Android Wear Square API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Square\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Square\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Square\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Square\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Square\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\WearOS\Android_Wear_Square\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\AndroidWearSquare' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\WearOS\Android_Wear_Square\config.ini"
+  powershell -Command "(gc %bangjago%\configs\WearOS\Android_Wear_Square\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\AndroidWearSquare' | Out-File -encoding ASCII %bangjago%\configs\WearOS\Android_Wear_Square\config.ini"
 
   goto installImageAws
 ) else (
@@ -14547,7 +14547,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Android_Wear_Square_API_%androidVersion%.avd" replace %systemdrive%\bangjago\configs\WearOS\Android_Wear_Square\config.ini %userprofile%\.android\avd\Android_Wear_Round_Square_API_%androidVersion%.avd
+if exist "%userprofile%\.android\avd\Android_Wear_Square_API_%androidVersion%.avd" replace %bangjago%\configs\WearOS\Android_Wear_Square\config.ini %userprofile%\.android\avd\Android_Wear_Round_Square_API_%androidVersion%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -14791,15 +14791,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionTv720
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tv\Android_TV_720p\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tv\Android_TV_720p\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tv\Android_TV_720p\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\tv\Android_TV_720p\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tv\Android_TV_720p\config.ini) -replace 'AvdId=*.*','AvdId=Android_TV_720p_API_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tv\Android_TV_720p\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tv\Android_TV_720p\config.ini) -replace 'AvdId=*.*','AvdId=Android_TV_720p_API_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tv\Android_TV_720p\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tv\Android_TV_720p\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Android TV (720p) API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tv\Android_TV_720p\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tv\Android_TV_720p\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Android TV (720p) API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tv\Android_TV_720p\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tv\Android_TV_720p\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tv\Android_TV_720p\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tv\Android_TV_720p\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\tv\Android_TV_720p\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tv\Android_TV_720p\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\tv_720p' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tv\Android_TV_720p\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tv\Android_TV_720p\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\tv_720p' | Out-File -encoding ASCII %bangjago%\configs\tv\Android_TV_720p\config.ini"
 
   goto installImageTv720
 ) else (
@@ -14830,7 +14830,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Android_TV_720p_API_%androidVersion%.avd" replace %systemdrive%\bangjago\configs\tv\Android_TV_720p\config.ini %userprofile%\.android\avd\Android_TV_720p_API_%androidVersion%.avd
+if exist "%userprofile%\.android\avd\Android_TV_720p_API_%androidVersion%.avd" replace %bangjago%\configs\tv\Android_TV_720p\config.ini %userprofile%\.android\avd\Android_TV_720p_API_%androidVersion%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
@@ -15047,15 +15047,15 @@ set /p abiVersion=input type cpu architecture version ? &
 if "%abiVersion%" == "0" goto checkAbiVersionTv1080
 
 if exist "%localappdata%\Android\Sdk\system-images\android-%androidVersion%\%targetVersion%\%abiVersion%" (
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tv\Android_TV_1080p\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tv\Android_TV_1080p\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tv\Android_TV_1080p\config.ini) -replace 'image.sysdir.1=*.*','image.sysdir.1=system-images\android-%androidVersionInt%\%targetVersion%\%abiVersion%\' | Out-File -encoding ASCII %bangjago%\configs\tv\Android_TV_1080p\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tv\Android_TV_1080p\config.ini) -replace 'AvdId=*.*','AvdId=Android_TV_1080p_%androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tv\Android_TV_1080p\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tv\Android_TV_1080p\config.ini) -replace 'AvdId=*.*','AvdId=Android_TV_1080p_%androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tv\Android_TV_1080p\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tv\Android_TV_1080p\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Android TV (1080p) API %androidVersionInt%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tv\Android_TV_1080p\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tv\Android_TV_1080p\config.ini) -replace 'avd.ini.displayname=*.*','avd.ini.displayname=Android TV (1080p) API %androidVersionInt%' | Out-File -encoding ASCII %bangjago%\configs\tv\Android_TV_1080p\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tv\Android_TV_1080p\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tv\Android_TV_1080p\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tv\Android_TV_1080p\config.ini) -replace 'hw.cpu.arch=*.*','hw.cpu.arch=%abiVersion%' | Out-File -encoding ASCII %bangjago%\configs\tv\Android_TV_1080p\config.ini"
 
-  powershell -Command "(gc %systemdrive%\bangjago\configs\tv\Android_TV_1080p\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\tv_1080p' | Out-File -encoding ASCII %systemdrive%\bangjago\configs\tv\Android_TV_1080p\config.ini"
+  powershell -Command "(gc %bangjago%\configs\tv\Android_TV_1080p\config.ini) -replace 'skin.path=*.*','skin.path=%userprofile%\AppData\Local\Android\Sdk\skins\tv_1080p' | Out-File -encoding ASCII %bangjago%\configs\tv\Android_TV_1080p\config.ini"
 
   goto installImageTv1080
 ) else (
@@ -15086,7 +15086,7 @@ cls
 echo off &echo.&echo off
 echo off &echo.&echo off
 
-if exist "%userprofile%\.android\avd\Android_TV_1080p_API_%androidVersion%.avd" replace %systemdrive%\bangjago\configs\tv\Android_TV_1080p\config.ini %userprofile%\.android\avd\Android_TV_1080p_API_%androidVersion%.avd
+if exist "%userprofile%\.android\avd\Android_TV_1080p_API_%androidVersion%.avd" replace %bangjago%\configs\tv\Android_TV_1080p\config.ini %userprofile%\.android\avd\Android_TV_1080p_API_%androidVersion%.avd
 goto overwriteConfig
 
 rem echo==============================================================================================================
