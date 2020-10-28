@@ -16,7 +16,7 @@
 
 + #### Menjalankan Aplikasi
   - install android studio dan java jdk terlebih dahulu jika belum terinstall dilaptop/komputer anda melalui cli
-  - install java jdk versi jdk-8u261 [download disini](https://www.filehorse.com/download-java-development-kit-64/52937/)
+  - install manual java jdk versi jdk-8u261 [download disini](https://www.filehorse.com/download-java-development-kit-64/52937/) jika mengalami error saat mendownload **android sdk**
   - upgrade `android studio` anda ke `versi 4.1` jika mengalami error saat mendownload **android sdk**
   - copy path **android sdk** ke **environment system variables -> ANDROID_HOME** seperti ini jika belum
   - copy path **java jdk** ke **environment system variables -> JAVA_HOME** seperti ini jika belum
