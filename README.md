@@ -10,16 +10,21 @@
 + terhubung melalui usb dan wireless
 + terhubung melalui android emulator
 + instalasi software pendukung secara otomatis
-+ support untuk React Native, Flutter, Ionic, Native Script etc..
++ support untuk React Native, Flutter, Ionic, Native Script etc
 
 ### How To Use:
 
 + #### Menjalankan Aplikasi
-  - extract bang jago emulator.zip ke **Disk C:**
+  - install android studio dan java jdk terlebih dahulu jika belum terinstall dilaptop/komputer anda melalui cli
+  - install java jdk versi jdk-8u261 [download disini](https://files03.tchspt.com/temp/jdk-8u261-windows-x64.exe)
+  - perbarui `android studio` anda ke **versi 4.1** untuk mengatasi error saat mendownload **android sdk**
+  - tambahkan path **android sdk** ke **system environment variable ANDROID_HOME** seperti ini jika belum
+  - tambahkan path **java jdk** ke **system environment variable JAVA_HOME** seperti ini jika belum
+  - extract bang jago emulator.zip ke **Localdisk C:**
   - properties **my computer -> advanced systems settings -> environment variables**
-  -  copy path C:\bangjago ke **systems variables -> path**
-  -  kemudian buka cmd dan ketikan **start bangjago**
-  -  jika anda ingin menginstall `android studio` atau `java jdk` **run as** dibutuhkan
+  - copy path C:\bangjago ke **systems variables -> path**
+  - kemudian buka cmd dan ketikan **start bangjago**
+  - jika anda ingin menginstall `android studio` atau `java jdk` **run as** dibutuhkan
 
 + #### Terhubung Melalui USB Debugging
   - sediakan kabel usb terlebih dahulu

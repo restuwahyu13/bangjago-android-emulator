@@ -133,6 +133,22 @@ rem echo========================================================================
 rem echo                                         SET CONFIG PACKAGE
 rem echo ==============================================================================================================
 :setConfig
+if exist "%systemdrive%\Program Files\Java\jdk1.8.0_261" (
+  goto setConfigInside
+) else (
+  msg %username% 'java jdk1.8.0_261 not installed'
+  goto start
+)
+
+:setConfigInside
+if exist "%systemdrive%\Program Files\Android\Android Studio" (
+  goto setPathConfig
+) else (
+  msg %username% 'android studio not installed'
+  goto start
+)
+
+:setPathConfig
 set path=%path%;%localappdata%\Android\Sdk\emulator
 set path=%path%;%localappdata%\Android\Sdk\platforms
 set path=%path%;%localappdata%\Android\Sdk\tools
