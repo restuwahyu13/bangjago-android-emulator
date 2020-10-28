@@ -871,7 +871,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-16\google_apis\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto kitkatListGoogle
+   goto jellyBeanListGoogle
  ) else (
    call sdkmanager system-images;android-16;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-16"
@@ -881,7 +881,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-16\google_apis\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto kitkatListGoogle
+    goto jellyBeanListGoogle
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-16;google_apis;x86
@@ -903,7 +903,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-17\google_apis\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto kitkatListGoogle
+   goto jellyBeanListGoogle
  ) else (
     call sdkmanager system-images;android-17;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-17"
@@ -913,7 +913,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-17\google_apis\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto kitkatListGoogle
+    goto jellyBeanListGoogle
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-17;google_apis;x86
@@ -935,7 +935,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-18\google_apis\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto kitkatListGoogle
+   goto jellyBeanListGoogle
  ) else (
    call sdkmanager system-images;android-18;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-18"
@@ -945,7 +945,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-18\google_apis\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto kitkatListGoogle
+    goto jellyBeanListGoogle
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-18;google_apis;x86
@@ -1253,7 +1253,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-21\google_apis\x86_64" (
    msg %username% 'system-images android sdk already exist'
-   goto kitkatListGoogle
+   goto lolipopListGoogle
  ) else (
    call sdkmanager system-images;android-21;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-21"
@@ -1263,7 +1263,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-21\google_apis\x86_64" (
     msg %username% 'system-images android sdk already exist'
-    goto kitkatListGoogle
+    goto lolipopListGoogle
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-21;google_apis;x86_64
@@ -1442,7 +1442,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-23\google_apis\x86_64" (
    msg %username% 'system-images android sdk already exist'
-   goto kitkatListGoogle
+   goto marshmallowListGoogle
  ) else (
    call sdkmanager system-images;android-23;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-23"
@@ -1452,7 +1452,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-23\google_apis\x86_64" (
     msg %username% 'system-images android sdk already exist'
-    goto kitkatListGoogle
+    goto marshmallowListGoogle
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-23;google_apis;x86_64
@@ -1917,7 +1917,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-28\google_apis\x86_64" (
    msg %username% 'system-images android sdk already exist'
-   goto pieList
+   goto pieListGoogle
  ) else (
    call sdkmanager system-images;android-28;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-28"
@@ -1927,7 +1927,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-28\google_apis\x86_64" (
     msg %username% 'system-images android sdk already exist'
-    goto pieList
+    goto pieListGoogle
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-28;google_apis;x86_64
@@ -2067,7 +2067,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-30\google_apis\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto rList
+   goto rListGoogle
  ) else (
    call sdkmanager system-images;android-30;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-30"
@@ -2077,7 +2077,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-30\google_apis\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto rList
+    goto rListGoogle
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-30;google_apis;x86
@@ -2203,7 +2203,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-16\default\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto lolipopListDefault
+   goto jellyBeanListDefault
  ) else (
    call sdkmanager system-images;android-16;default;x86
    call sdkmanager "platform-tools" "platforms;android-16"
@@ -2213,7 +2213,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-16\default\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto lolipopListDefault
+    goto jellyBeanListDefault
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-16;default;x86
@@ -2235,7 +2235,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-17\default\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto lolipopListDefault
+   goto jellyBeanListDefault
  ) else (
    call sdkmanager system-images;android-17;default;x86
    call sdkmanager "platform-tools" "platforms;android-17"
@@ -2245,7 +2245,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-17\default\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto lolipopListDefault
+    goto jellyBeanListDefault
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-17;default;x86
@@ -2267,7 +2267,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-18\default\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto lolipopListDefault
+   goto jellyBeanListDefault
  ) else (
    call sdkmanager system-images;android-18;default;x86
    call sdkmanager "platform-tools" "platforms;android-18"
@@ -2277,7 +2277,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-18\default\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto lolipopListDefault
+    goto jellyBeanListDefault
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-18;default;x86
@@ -2331,7 +2331,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-17\default\armeabi-v7a" (
    msg %username% 'system-images android sdk already exist'
-   goto kitkatListGoogle
+   goto jellyBeanListDefault
  ) else (
    call sdkmanager system-images;android-17;default;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-17"
@@ -2341,7 +2341,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-17\default\armeabi-v7a" (
     msg %username% 'system-images android sdk already exist'
-    goto kitkatListGoogle
+    goto jellyBeanListDefault
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-17;default;armeabi-v7a
@@ -2422,7 +2422,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-19\default\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto kitkatListGoogle
+   goto kitkatListDefault
  ) else (
    call sdkmanager system-images;android-19;default;x86
    call sdkmanager "platform-tools" "platforms;android-19"
@@ -2432,7 +2432,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-19\default\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto kitkatListGoogle
+    goto kitkatListDefault
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-19;default;x86
@@ -2903,7 +2903,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-25\default\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto kitkatListGoogle
+   goto nougetListDefault
  ) else (
    call sdkmanager system-images;android-25;default;x86
    call sdkmanager "platform-tools" "platforms;android-25"
@@ -2913,7 +2913,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-25\default\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto kitkatListGoogle
+    goto nougetListDefault
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-25;default;x86
@@ -3436,7 +3436,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-21\android-tv\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto kitkatListGoogle
+   goto lolipopListTvA
  ) else (
    call sdkmanager system-images;android-21;android-tv;x86
    call sdkmanager "platform-tools" "platforms;android-21"
@@ -3446,7 +3446,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-21\android-tv\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto kitkatListGoogle
+    goto lolipopListTvA
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-21;android-tv;x86
@@ -3830,7 +3830,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-28\android-tv\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto oreoListTvA
+   goto pieListTvA
  ) else (
    call sdkmanager system-images;android-28;android-tv;x86
    call sdkmanager "platform-tools" "platforms;android-28"
@@ -3840,7 +3840,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-28\android-tv\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto oreoListTvA
+    goto pieListTvA
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-28;android-tv;x86
@@ -4157,7 +4157,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-26\android-wear\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto marshmallowListWr
+   goto oreoListWr
  ) else (
    call sdkmanager system-images;android-26;android-wear;x86
    call sdkmanager "platform-tools" "platforms;android-26"
@@ -4167,7 +4167,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-26\android-wear\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto marshmallowListWr
+    goto oreoListWr
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-26;android-wear;x86
@@ -4214,7 +4214,7 @@ echo off &echo.&echo off
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-28\android-wear\x86" (
    msg %username% 'system-images android sdk already exist'
-   goto marshmallowListWr
+   goto pieListWr
  ) else (
    call sdkmanager system-images;android-28;android-wear;x86
    call sdkmanager "platform-tools" "platforms;android-28"
@@ -4224,7 +4224,7 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
 ) else (
   if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-28\android-wear\x86" (
     msg %username% 'system-images android sdk already exist'
-    goto marshmallowListWr
+    goto pieListWr
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-28;android-wear;x86
