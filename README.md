@@ -234,6 +234,10 @@ Flutter              | 8.0.8.0        | Wireless |
   Android_Wear_Round_Chin | 1024 MB | 1 Core     | 2048 MB          |
   Android_Wear_Square     | 1024 MB | 1 Core     | 2048 MB          |
   
+
+### Video Tutorial:
++ [Tutorial](https://bit.ly/2G5KUYR)
+
 ### Author:
 
 + [Restu Wahyu Saputra](https://github.com/restuwahyu13)
