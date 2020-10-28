@@ -6,6 +6,10 @@ rem echo =======================================================================
 rem echo                  BANG JAGO EMULATOR ANDROID - COPYRIGHT 2020 BY RESTU WAHYU SAPUTRA
 rem echo ==============================================================================================================
 :start
+set path=%path%;%localappdata%\Android\Sdk\emulator
+set path=%path%;%localappdata%\Android\Sdk\platforms
+set path=%path%;%localappdata%\Android\Sdk\tools
+set path=%path%;%localappdata%\Android\Sdk\tools\bin
 echo off &echo.&echo off
 echo off
 echo off
@@ -51,7 +55,7 @@ echo off &echo.&echo off
 echo off &echo.&echo off
 
 if exist "%localappdata%\bangjago-emulator" (
-  goto setConfig
+  goto appStart
 ) else (
   goto downloadPackage
 )
@@ -127,33 +131,7 @@ echo off &echo.&echo off
 echo off &echo.&echo off
 
 del "%localappdata%\bangjago-emulator\scrcpy-win32-v1.16.zip"
-if not exist "%localappdata%\bangjago-emulator\scrcpy-win32-v1.16.zip" goto setConfig
-
-rem echo===============================================================================================================
-rem echo                                         SET CONFIG PACKAGE
-rem echo ==============================================================================================================
-:setConfig
-if exist "%JAVA_HOME%" (
-  goto setConfigInside
-) else (
-  msg %username% 'java jdk path environment variable is not exist'
-  goto start
-)
-
-:setConfigInside
-if exist "%ANDROID_HOME%" (
-  goto setPathConfig
-) else (
-  msg %username% 'android sdk path environment variable is not exist'
-  goto start
-)
-
-:setPathConfig
-set path=%path%;%localappdata%\Android\Sdk\emulator
-set path=%path%;%localappdata%\Android\Sdk\platforms
-set path=%path%;%localappdata%\Android\Sdk\tools
-set path=%path%;%localappdata%\Android\Sdk\tools\bin
-goto appStart
+if not exist "%localappdata%\bangjago-emulator\scrcpy-win32-v1.16.zip" goto appStart
 
 rem ==============================================================================================================
 rem                                    APPLICATION BANG JAGO EMULATOR
