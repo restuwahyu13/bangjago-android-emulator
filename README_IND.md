@@ -4,7 +4,7 @@
 
 ### Language:
 
-- [English Language]()
+- [English Language](https://github.com/restuwahyu13/bangjago-android-emulator)
 
 ### Features:
 
@@ -24,11 +24,11 @@
   - **Running Emulator** digunakan untuk menjalakan **emulator** melalui **usb debugging** atau **wireless**
 
 - #### **SDK TOOLS**
-  + **Google Android SDK** untuk mendowload **android sdk** versi **android-google apis**
-  + **Default Android SDK** untuk mendowload **android sdk** versi **android-default**
-  + **TV Android SDK** untuk mendowload **android sdk** versi **android-tv**
-  + **Wear Android SDK** untuk mendowload **android sdk** versi **android-wear**
-  + **Google Playstore SDK** untuk mendowload **android sdk** versi **google_apis_playstore**
+  + **Google Android SDK** untuk mendownload **android sdk** versi **android-google apis**
+  + **Default Android SDK** untuk mendownload **android sdk** versi **android-default**
+  + **TV Android SDK** untuk mendownload **android sdk** versi **android-tv**
+  + **Wear Android SDK** untuk mendownload **android sdk** versi **android-wear**
+  + **Google Playstore SDK** untuk mendownload **android sdk** versi **google_apis_playstore**
 
 - #### **AVD TOOLS**
   + **List AVD Emulator** untuk menampilkan semua **avd emulator** yang tersedia
@@ -38,8 +38,8 @@
   + **Update AVD Emulator** untuk memperbarui **avd emulator**
 
 - #### **SOFTWARE TOOLS**
-  + **Java JDK** untuk mendowload **java jdk** secara otomatis
-  + **Android Studio** untuk mendowload **android studio** secara otomatis
+  + **Java JDK** untuk mendownload **java jdk** secara otomatis
+  + **Android Studio** untuk mendownload **android studio** secara otomatis
 
 - #### **More Information**
   + informasi terkait **developer** dan dukungan **donation project**
@@ -48,17 +48,18 @@
 
 - #### Menjalankan Aplikasi
 
-  - install android studio dan java jdk terlebih dahulu jika belum terinstall dilaptop/komputer anda melalui cli
-  - install java jdk versi jdk-8u261 [download disini](https://www.filehorse.com/download-java-development-kit-64/52937/) jika mengalami **error**
-  - upgrade `android studio` anda ke `versi 4.1` jika mengalami error saat mendownload **android sdk**
+  - install Android Studio dan java jdk terlebih dahulu jika belum terinstall di laptop/komputer anda melalui cli
+  - install Java JDK versi jdk-8u261 [download disini](https://www.filehorse.com/download-java-development-kit-64/52937/) jika mengalami **error**
+  - upgrade `Android Studio` anda ke `versi 4.1` jika mengalami error saat mendownload **Android SDK**
   - copy path **android sdk** ke **environment system variables -> ANDROID_HOME** seperti ini jika belum
   - copy path **java jdk** ke **environment system variables -> JAVA_HOME** seperti ini jika belum
-  - extract bang jago emulator.zip ke **Localdisk C:**
+  - download bangjago emulator melalui tautan link bit.ly diatas
+  - kemudian extract bangjago emulator.zip ke **Localdisk C:**
   - properties **my computer -> advanced systems settings -> environment variables**
   - copy path C:\bangjago ke **environment systems variables -> path**
   - copy path C:\bangjago ke **environment systems variables -> bangjago**
   - kemudian buka **cmd** dan ketikan **start bangjago**, jangan menggunakan terminal selain **cmd**
-  - jika anda ingin menginstall `android studio` atau `java jdk` **run as** dibutuhkan
+  - jika anda ingin menginstall **Android Studio** atau **Java JDK** **run as** dibutuhkan
 
 - #### Terhubung Melalui USB Debugging
 
@@ -83,8 +84,8 @@
   - jika tidak terhubung pilih **adb tools -> restart adb** kemudian ulangi lagi dari awal
 
 - #### Terhubung Melalui Emulator
-  - pilih **avd tools -> create emulator** maka nanti **android sdk** akan didownload secara otomatis
-  - lewati cara **pertama** jika **avd device** sudah ada sebelumnya
+  - pilih **avd tools -> create emulator** maka nanti **Android SDK** akan didownload secara otomatis
+  - lewati cara **pertama** jika **avd emulator** sudah ada sebelumnya
   - kemudian jalankan emulator **pilih avd tools -> running emulator**
   - kemudian masukan **nama emulator** yang sudah pernah dibuat sebelumnya
   - android emulator berhasil dijalankan

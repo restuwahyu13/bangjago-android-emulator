@@ -4,7 +4,7 @@
 
 ### Language:
 
-- [Indonesian Language]()
+- [Indonesian Language](https://github.com/restuwahyu13/bangjago-android-emulator/blob/main/README_IND.md)
 
 ### Features:
 
@@ -48,24 +48,24 @@
 
 #### 1. Running Application
 
-- First, you must install andorid studio and java jdk if not installed on PC/Laptop over CLI
+- First, you must install **Android Studio and Java JDK** if not installed on **Computer/Laptop** over CLI
 - Install java jdk versi jdk-8u261 [Download Here](https://www.filehorse.com/download-java-development-kit-64/52937/) **If you encounter an error**
-- Upgrade `Android Studio` to `4.1 Version` If any Error encountered when you downloading **android sdk**
-- Download file over repository github Bangjago emulator choose **releases**
-- Extract bang jago emulator.zip to **Localdisk C**
+- Upgrade `Android Studio` to `4.1 Version` If any Error encountered when you downloading **Android SDK**
+- Download the file via the **bit.ly** link above
+- Extract bangjago emulator.zip to **Localdisk C**
 - Click properties my computer-> **advanced system settings -> environment variable**
-- Copy path **android sdk** to **environment system variable** -> **ANDROID_HOME**
-- Copy path **java jdk** to **environment system variable** -> **JAVA_HOME**
+- Copy path **Android SDK** to **environment system variable** -> **ANDROID_HOME**
+- Copy path **Java JDK** to **environment system variable** -> **JAVA_HOME**
 - Copy path **C:\bangjago to environment system variable -> path**
-- Copy path **C:\bangjago to enironment system variabel -> bangjago**
+- Copy path **C:\bangjago to environment system variabel -> bangjago**
 - You can open **cmd** and type **start bangjago**, don't use a terminal other than **cmd**
-- If you want to install `android studio` or `java jdk` **run as** is required
+- If you want to install **Android Studio** or **Java JDK** **run as** is required
 
 #### 2. Connected over USB Debugging
 
 - First, you must Provide USB Cabel
 - Enable **USB Debugging** on your smartphone
-- Ensured your smartphone could connect on your **PC/Laptop**
+- Ensured your smartphone could connect on your **Computer/Laptop**
 - Selected **adb tools** then choose **add add usb**
 - Select the default **USB debugging** port and **device**
 - Just running emulator -> emulator usb
@@ -74,7 +74,7 @@
 #### 3. Connected over Wireless
 
 - First, you must provide USB cable
-- Plug USB to port **PC/Laptop**
+- Plug USB to port **Computer/Laptop**
 - Enable **USB Debugging** on your smartphone
 - Make sure your smartphone is connected
 - Selected **adb tools** then choose **add wireless**
@@ -85,8 +85,8 @@
 
 #### 4. Connected over Emulator.
 
-- Select **avd tools -> create emulator** then **android SDK** will be downloaded automatically
-- Skip the first **method** if **avd device** already exists
+- Select **avd tools -> create emulator** then **Android SDK** will be downloaded automatically
+- Skip the first **method** if **avd emulator** already exists
 - How to run the emulator **avd tool options -> then select run emulator**
 - Enter **emulator name** that was created before
 
