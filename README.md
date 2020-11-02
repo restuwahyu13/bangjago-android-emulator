@@ -57,7 +57,7 @@
 - First, you must install andorid studio and java jdk if not installed on PC/Laptop over CLI
 - Install java jdk versi jdk-8u261 [Download Here](https://www.filehorse.com/download-java-development-kit-64/52937/) **If you encounter an error**
 - Upgrade `Android Studio` to `4.1 Version` If any Error encountered when you downloading **android sdk**
-- Download file Bangjago emulator **[in here](https://bit.ly/2HROC9c)**
+- Download file Bangjago emulator [in here](https://bit.ly/2HROC9c)
 - Extract bang jago emulator.zip to **Localdisk C**
 - Click properties my computer-> **advanced system settings -> environment variable**
 - Copy path **android sdk** to **environment system variable** -> **ANDROID_HOME**

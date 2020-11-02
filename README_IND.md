@@ -57,7 +57,7 @@
   - install android studio dan java jdk terlebih dahulu jika belum terinstall dilaptop/komputer anda melalui cli
   - install java jdk versi jdk-8u261 [download disini](https://www.filehorse.com/download-java-development-kit-64/52937/) jika mengalami **error**
   - upgrade `android studio` anda ke `versi 4.1` jika mengalami error saat mendownload **android sdk**
-  - Download file Bangjago emulator **[di sini](https://bit.ly/2HROC9c)**
+  - Download file Bangjago emulator [disini](https://bit.ly/2HROC9c)
   - copy path **android sdk** ke **environment system variables -> ANDROID_HOME** seperti ini jika belum
   - copy path **java jdk** ke **environment system variables -> JAVA_HOME** seperti ini jika belum
   - extract bang jago emulator.zip ke **Localdisk C:**
