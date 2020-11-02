@@ -4,7 +4,7 @@
 
 ### Language:
 
-- [Indonesian Language]()
+- [Indonesian Language](https://github.com/restuwahyu13/bangjago-emulator/blob/main/README_IND.md)
 
 ### Features:
 

@@ -4,7 +4,7 @@
 
 ### Language:
 
-- [English Language]()
+- [English Language](https://github.com/restuwahyu13/bangjago-emulator/blob/main/README.md)
 
 ### Features:
 
