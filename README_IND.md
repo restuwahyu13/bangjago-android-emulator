@@ -16,33 +16,39 @@
 - support untuk React Native, Flutter, Ionic, Native Script etc
 
 ### Command:
+
 - #### **ADB TOOLS**
-  + **Add Adb USB** digunakan untuk menambahkan **port usb debugging**
-  + **Add Adb Wireless** digunakan untuk menambahkan **ip address**
-  + **Restart ADB** digunakan untuk mereset **adb** ke **default port**
-  + **Check ADB** digunakan untuk megecek apakah **adb device** sudah **terhubung/belum**
-  - **Running Emulator** digunakan untuk menjalakan **emulator** melalui **usb debugging** atau **wireless**
+
+  - **Add Adb USB** digunakan untuk menambahkan **port usb debugging**
+  - **Add Adb Wireless** digunakan untuk menambahkan **ip address**
+  - **Restart ADB** digunakan untuk mereset **adb** ke **default port**
+  - **Check ADB** digunakan untuk megecek apakah **adb device** sudah **terhubung/belum**
+
+  * **Running Emulator** digunakan untuk menjalakan **emulator** melalui **usb debugging** atau **wireless**
 
 - #### **SDK TOOLS**
-  + **Google Android SDK** untuk mendowload **android sdk** versi **android-google apis** 
-  + **Default Android SDK** untuk mendowload **android sdk** versi **android-default** 
-  + **TV Android SDK** untuk mendowload **android sdk** versi **android-tv** 
-  + **Wear Android SDK** untuk mendowload **android sdk** versi **android-wear** 
-  + **Google Playstore SDK** untuk mendowload **android sdk** versi **google_apis_playstore** 
+
+  - **Google Android SDK** untuk mendowload **android sdk** versi **android-google apis**
+  - **Default Android SDK** untuk mendowload **android sdk** versi **android-default**
+  - **TV Android SDK** untuk mendowload **android sdk** versi **android-tv**
+  - **Wear Android SDK** untuk mendowload **android sdk** versi **android-wear**
+  - **Google Playstore SDK** untuk mendowload **android sdk** versi **google_apis_playstore**
 
 - #### **AVD TOOLS**
-  + **List AVD Emulator** untuk menampilkan semua **avd emulator** yang tersedia 
-  + **Create AVD Emulator** untuk membuat **avd emulator baru** 
-  + **Running AVD Emulator** untuk menjalankan **avd emulator** 
-  + **Delete AVD Emulator** untuk menghapus **avd emulator** 
-  + **Update AVD Emulator** untuk memperbarui **avd emulator**
+
+  - **List AVD Emulator** untuk menampilkan semua **avd emulator** yang tersedia
+  - **Create AVD Emulator** untuk membuat **avd emulator baru**
+  - **Running AVD Emulator** untuk menjalankan **avd emulator**
+  - **Delete AVD Emulator** untuk menghapus **avd emulator**
+  - **Update AVD Emulator** untuk memperbarui **avd emulator**
 
 - #### **SOFTWARE TOOLS**
-  + **Java JDK** untuk mendowload **java jdk** secara otomatis
-  + **Android Studio** untuk mendowload **android studio** secara otomatis
+
+  - **Java JDK** untuk mendowload **java jdk** secara otomatis
+  - **Android Studio** untuk mendowload **android studio** secara otomatis
 
 - #### **More Information**
-  + informasi terkait **developer** dan dukungan **donation project**
+  - informasi terkait **developer** dan dukungan **donation project**
 
 ### How To Use:
 
@@ -51,6 +57,7 @@
   - install android studio dan java jdk terlebih dahulu jika belum terinstall dilaptop/komputer anda melalui cli
   - install java jdk versi jdk-8u261 [download disini](https://www.filehorse.com/download-java-development-kit-64/52937/) jika mengalami **error**
   - upgrade `android studio` anda ke `versi 4.1` jika mengalami error saat mendownload **android sdk**
+  - Download file Bangjago emulator **[di sini](https://bit.ly/2HROC9c)**
   - copy path **android sdk** ke **environment system variables -> ANDROID_HOME** seperti ini jika belum
   - copy path **java jdk** ke **environment system variables -> JAVA_HOME** seperti ini jika belum
   - extract bang jago emulator.zip ke **Localdisk C:**
@@ -281,7 +288,6 @@ Jika anda suka dengan **project ini** atau anda ingin **mensupport project ini**
 ### Video Tutorial:
 
 - [Tutorial](https://bit.ly/2G5KUYR)
-
 
 ### Author && Contributor:
 

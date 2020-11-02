@@ -16,33 +16,39 @@
 - Supported for things like React Native, Native, Ionic, Native Script etc.
 
 ### Command:
+
 - #### **ADB TOOLS**
-  + **Add Adb USB** is used to add **usb debugging port**
-  + **Add Adb Wireless** is used to add **ip address**
-  + **Restart ADB** is used to reset **adb** to **default port**
-  + **Check ADB** is used to check if **adb device is connected or not**
-  - **Running Emulator** is used to run **emulator** via **usb debugging** or **wireless**
+
+  - **Add Adb USB** is used to add **usb debugging port**
+  - **Add Adb Wireless** is used to add **ip address**
+  - **Restart ADB** is used to reset **adb** to **default port**
+  - **Check ADB** is used to check if **adb device is connected or not**
+
+  * **Running Emulator** is used to run **emulator** via **usb debugging** or **wireless**
 
 - #### **SDK TOOLS**
-  + **Google Android SDK** to download **android SDK** version **android-google apis**
-  + **Default Android SDK** to download **android SDK** version **android-default** 
-  + **TV Android SDK** to download **android SDK** version **android-tv** 
-  + **Wear Android SDK** to download **android SDK** version **android-wear** 
-  + **Google Playstore SDK** to download **android SDK** version **google_apis_playstore** 
+
+  - **Google Android SDK** to download **android SDK** version **android-google apis**
+  - **Default Android SDK** to download **android SDK** version **android-default**
+  - **TV Android SDK** to download **android SDK** version **android-tv**
+  - **Wear Android SDK** to download **android SDK** version **android-wear**
+  - **Google Playstore SDK** to download **android SDK** version **google_apis_playstore**
 
 - #### **AVD TOOLS**
-  + **List AVD Emulator** to list all **avd emulators** available
-  + **Create AVD Emulator** to create **new avd emulator**
-  + **Running AVD Emulator** to run **avd emulator**
-  + **Delete AVD Emulator** to remove **avd emulator** 
-  + **Update AVD Emulator** to update **avd emulator**
+
+  - **List AVD Emulator** to list all **avd emulators** available
+  - **Create AVD Emulator** to create **new avd emulator**
+  - **Running AVD Emulator** to run **avd emulator**
+  - **Delete AVD Emulator** to remove **avd emulator**
+  - **Update AVD Emulator** to update **avd emulator**
 
 - #### **SOFTWARE TOOLS**
-  + **Java JDK** to download **java jdk** automatically
-  + **Android Studio** to download **android studio** automatically
+
+  - **Java JDK** to download **java jdk** automatically
+  - **Android Studio** to download **android studio** automatically
 
 - #### **More Information**
-  + **developer related information** and support **project donation**
+  - **developer related information** and support **project donation**
 
 ### How To Use:
 
@@ -51,7 +57,7 @@
 - First, you must install andorid studio and java jdk if not installed on PC/Laptop over CLI
 - Install java jdk versi jdk-8u261 [Download Here](https://www.filehorse.com/download-java-development-kit-64/52937/) **If you encounter an error**
 - Upgrade `Android Studio` to `4.1 Version` If any Error encountered when you downloading **android sdk**
-- Download file over repository github Bangjago emulator choose **releases**
+- Download file Bangjago emulator **[in here](https://bit.ly/2HROC9c)**
 - Extract bang jago emulator.zip to **Localdisk C**
 - Click properties my computer-> **advanced system settings -> environment variable**
 - Copy path **android sdk** to **environment system variable** -> **ANDROID_HOME**
