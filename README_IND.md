@@ -1,94 +1,93 @@
 ## Bang Jago Android Emulator (CLI Version)
 
-**Bang Jago Emulator** is application based on cli that's used for**mobile development** which it uses as **Android Emulator** as well as **Genymotion**. in spite of likey Genymotion. additionally, I made some a bit features that've not been in **genymotion.** likely. connecting with **USB Debugging** and **Wireless**. for now, jush only available for **Windows User** maybe in advanced that i will be making on another operating system **(Mac or Linux**)
+**Bang Jago Emulator** adalah aplikasi cli sederhana yang digunakan untuk **pegembangan mobile development**, yang dimana fungsinya itu sebagai **android emulator**, fungsinya kurang lebih sama seperti dengan **Genymotion** walaupun tidak sebagus **Genymotion** dan saya sedikit menambahkan beberapa fiture yang tidak ada di **Genymotion**, seperti terhubung dengan **USB Debugging** dan **Wireless**, untuk saat ini hanya tersedia untuk pengguna **Windows** saja, di lain waktu mungkin saya akan membuatnya untuk versi **Mac OS dan Linux**.
 
 ### Language:
 
-- [Indonesian Language]()
+- [English Language]()
 
 ### Features:
 
-- Effeciency Management RAM and CPU
-- Connected over USB and Wireless.
-- Connected over Android Emulator
-- Installation Software Supported automatically
-- Easy To Use
-- Supported for things like React Native, Native, Ionic, Native Script etc.
+- sangat mudah digunakan
+- daya penggunaan cpu dan ram yang rendah
+- terhubung melalui usb dan wireless
+- terhubung melalui android emulator
+- instalasi software pendukung secara otomatis
+- support untuk React Native, Flutter, Ionic, Native Script etc
 
 ### Command:
 - #### **ADB TOOLS**
-  + **Add Adb USB** is used to add **usb debugging port**
-  + **Add Adb Wireless** is used to add **ip address**
-  + **Restart ADB** is used to reset **adb** to **default port**
-  + **Check ADB** is used to check if **adb device is connected or not**
-  - **Running Emulator** is used to run **emulator** via **usb debugging** or **wireless**
+  + **Add Adb USB** digunakan untuk menambahkan **port usb debugging**
+  + **Add Adb Wireless** digunakan untuk menambahkan **ip address**
+  + **Restart ADB** digunakan untuk mereset **adb** ke **default port**
+  + **Check ADB** digunakan untuk megecek apakah **adb device** sudah **terhubung/belum**
+  - **Running Emulator** digunakan untuk menjalakan **emulator** melalui **usb debugging** atau **wireless**
 
 - #### **SDK TOOLS**
-  + **Google Android SDK** to download **android SDK** version **android-google apis**
-  + **Default Android SDK** to download **android SDK** version **android-default** 
-  + **TV Android SDK** to download **android SDK** version **android-tv** 
-  + **Wear Android SDK** to download **android SDK** version **android-wear** 
-  + **Google Playstore SDK** to download **android SDK** version **google_apis_playstore** 
+  + **Google Android SDK** untuk mendowload **android sdk** versi **android-google apis** 
+  + **Default Android SDK** untuk mendowload **android sdk** versi **android-default** 
+  + **TV Android SDK** untuk mendowload **android sdk** versi **android-tv** 
+  + **Wear Android SDK** untuk mendowload **android sdk** versi **android-wear** 
+  + **Google Playstore SDK** untuk mendowload **android sdk** versi **google_apis_playstore** 
 
 - #### **AVD TOOLS**
-  + **List AVD Emulator** to list all **avd emulators** available
-  + **Create AVD Emulator** to create **new avd emulator**
-  + **Running AVD Emulator** to run **avd emulator**
-  + **Delete AVD Emulator** to remove **avd emulator** 
-  + **Update AVD Emulator** to update **avd emulator**
+  + **List AVD Emulator** untuk menampilkan semua **avd emulator** yang tersedia 
+  + **Create AVD Emulator** untuk membuat **avd emulator baru** 
+  + **Running AVD Emulator** untuk menjalankan **avd emulator** 
+  + **Delete AVD Emulator** untuk menghapus **avd emulator** 
+  + **Update AVD Emulator** untuk memperbarui **avd emulator**
 
 - #### **SOFTWARE TOOLS**
-  + **Java JDK** to download **java jdk** automatically
-  + **Android Studio** to download **android studio** automatically
+  + **Java JDK** untuk mendowload **java jdk** secara otomatis
+  + **Android Studio** untuk mendowload **android studio** secara otomatis
 
 - #### **More Information**
-  + **developer related information** and support **project donation**
+  + informasi terkait **developer** dan dukungan **donation project**
 
 ### How To Use:
 
-#### 1. Running Application
+- #### Menjalankan Aplikasi
 
-- First, you must install andorid studio and java jdk if not installed on PC/Laptop over CLI
-- Install java jdk versi jdk-8u261 [Download Here](https://www.filehorse.com/download-java-development-kit-64/52937/) **If you encounter an error**
-- Upgrade `Android Studio` to `4.1 Version` If any Error encountered when you downloading **android sdk**
-- Download file over repository github Bangjago emulator choose **releases**
-- Extract bang jago emulator.zip to **Localdisk C**
-- Click properties my computer-> **advanced system settings -> environment variable**
-- Copy path **android sdk** to **environment system variable** -> **ANDROID_HOME**
-- Copy path **java jdk** to **environment system variable** -> **JAVA_HOME**
-- Copy path **C:\bangjago to environment system variable -> path**
-- Copy path **C:\bangjago to enironment system variabel -> bangjago**
-- You can open **cmd** and type **start bangjago**, don't use a terminal other than **cmd**
-- If you want to install `android studio` or `java jdk` **run as** is required
+  - install android studio dan java jdk terlebih dahulu jika belum terinstall dilaptop/komputer anda melalui cli
+  - install java jdk versi jdk-8u261 [download disini](https://www.filehorse.com/download-java-development-kit-64/52937/) jika mengalami **error**
+  - upgrade `android studio` anda ke `versi 4.1` jika mengalami error saat mendownload **android sdk**
+  - copy path **android sdk** ke **environment system variables -> ANDROID_HOME** seperti ini jika belum
+  - copy path **java jdk** ke **environment system variables -> JAVA_HOME** seperti ini jika belum
+  - extract bang jago emulator.zip ke **Localdisk C:**
+  - properties **my computer -> advanced systems settings -> environment variables**
+  - copy path C:\bangjago ke **environment systems variables -> path**
+  - copy path C:\bangjago ke **environment systems variables -> bangjago**
+  - kemudian buka **cmd** dan ketikan **start bangjago**, jangan menggunakan terminal selain **cmd**
+  - jika anda ingin menginstall `android studio` atau `java jdk` **run as** dibutuhkan
 
-#### 2. Connected over USB Debugging
+- #### Terhubung Melalui USB Debugging
 
-- First, you must Provide USB Cabel
-- Enable **USB Debugging** on your smartphone
-- Ensured your smartphone could connect on your **PC/Laptop**
-- Selected **adb tools** then choose **add add usb**
-- Select the default **USB debugging** port and **device**
-- Just running emulator -> emulator usb
-- If not connected then choosing **adb tools->restart adb** and repeat.
+  - sediakan kabel usb terlebih dahulu
+  - nyalakan pengaturan **usb debugging** pada smartphone anda
+  - pastikan smartphone anda sudah terhubung di **laptop/komputer**
+  - pilih **adb tools** kemudian pilih **add adb usb**
+  - masukan port default usb debugging sesuai **perangkat** tersebut
+  - kemudian jalankan emulator pilih **running emulator -> emulator usb**
+  - jika tidak terhubung pilih **adb tools -> restart adb** kemudian ulangi lagi dari awal
 
-#### 3. Connected over Wireless
+- #### Terhubung Melalui Wireless
 
-- First, you must provide USB cable
-- Plug USB to port **PC/Laptop**
-- Enable **USB Debugging** on your smartphone
-- Make sure your smartphone is connected
-- Selected **adb tools** then choose **add wireless**
-- Set **IP Address** default
-- If it works, unplug your smartphone from USB.
-- Close emulator and Run Emulator again **run emulator -> wireless emulator**
-- If not connected , you can select **adb tools -> restart adb** then repeat
+  - sediakan kabel usb terlebih dahulu
+  - kemudian masukan usb ke port **laptop/komputer** anda
+  - nyalakan pengaturan **usb debugging** pada smartphone anda
+  - pastikan smartphone anda sudah terhubung di **laptop/komputer**
+  - pilih **adb tools** kemudian pilih **adb wireless**
+  - masukan **ip address** default sesuai **perangkat** tersebut
+  - ketika emulator berhasil ditampilkan, cabut smartphone anda dari usb
+  - kemudian tutup emulator dan jalankan emulator kembali pilih **running emulator -> emulator wireless**
+  - jika tidak terhubung pilih **adb tools -> restart adb** kemudian ulangi lagi dari awal
 
-#### 4. Connected over Emulator.
-
-- Select **avd tools -> create emulator** then **android SDK** will be downloaded automatically
-- Skip the first **method** if **avd device** already exists
-- How to run the emulator **avd tool options -> then select run emulator**
-- Enter **emulator name** that was created before
+- #### Terhubung Melalui Emulator
+  - pilih **avd tools -> create emulator** maka nanti **android sdk** akan didownload secara otomatis
+  - lewati cara **pertama** jika **avd device** sudah ada sebelumnya
+  - kemudian jalankan emulator **pilih avd tools -> running emulator**
+  - kemudian masukan **nama emulator** yang sudah pernah dibuat sebelumnya
+  - android emulator berhasil dijalankan
 
 ### Default Port Device:
 
@@ -277,11 +276,12 @@
 
 ### Support Project:
 
-If you like **this project** or you want to **support this project**, you can **treat me to a cup of coffee** or you can **donate** via the following link **[Donate](https://bit.ly/37KsgkB)**.
+Jika anda suka dengan **project ini** atau anda ingin **mensupport project ini**, anda bisa **mentraktir saya secangkir kopi** atau bisa **berdonasi** melalu link berikut ini **[Donate](https://bit.ly/37KsgkB)**.
 
 ### Video Tutorial:
 
 - [Tutorial](https://bit.ly/2G5KUYR)
+
 
 ### Author && Contributor:
 
