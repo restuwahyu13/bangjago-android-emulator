@@ -1,255 +1,293 @@
 ## Bang Jago Android Emulator (CLI Version)
 
-**Bang Jago Emulator** adalah aplikasi cli sederhana yang digunakan untuk **pegembangan mobile development**, yang dimana fungsinya itu sebagai **android emulator**, fungsinya kurang lebih sama seperti dengan **Genymotion** walaupun tidak sebagus **Genymotion** dan saya sedikit menambahkan beberapa fiture yang tidak ada di **Genymotion**, seperti terhubung dengan **USB Debugging** dan **Wireless**, untuk saat ini hanya tersedia untuk pengguna **Windows** saja, di lain waktu mungkin saya akan membuatnya untuk versi **Mac OS dan Linux**.
+**Bangjago Emulator** is a cli-based application used for **mobile development**, which is used as an **Android Emulator** like **Genymotion** even though it's not as good as **Genymotion**, besides that, I added some features that are not in **Genymotion**, such as connecting your mobile device using **USB Debugging and Wireless** for android development, for now only available for **Windows users**, maybe next time I will make it for another operating system version like **(Mac or Linux)**.
+
+### Language:
+
+- [Indonesian Language]()
 
 ### Features:
 
-+ ukuran hanya 800kb
-+ sangat mudah digunakan
-+ daya penggunaan cpu dan ram yang rendah
-+ terhubung melalui usb dan wireless
-+ terhubung melalui android emulator
-+ instalasi software pendukung secara otomatis
-+ support untuk React Native, Flutter, Ionic, Native Script etc
+- Effeciency Management RAM and CPU
+- Connected over USB and Wireless.
+- Connected over Android Emulator
+- Installation Software Supported automatically
+- Easy To Use
+- Supported for things like React Native, Native, Ionic, Native Script etc.
+
+### Command:
+- #### **ADB TOOLS**
+  + **Add Adb USB** is used to add **usb debugging port**
+  + **Add Adb Wireless** is used to add **ip address**
+  + **Restart ADB** is used to reset **adb** to **default port**
+  + **Check ADB** is used to check if **adb device is connected or not**
+  - **Running Emulator** is used to run **emulator** via **usb debugging** or **wireless**
+
+- #### **SDK TOOLS**
+  + **Google Android SDK** to download **android SDK** version **android-google apis**
+  + **Default Android SDK** to download **android SDK** version **android-default**
+  + **TV Android SDK** to download **android SDK** version **android-tv**
+  + **Wear Android SDK** to download **android SDK** version **android-wear**
+  + **Google Playstore SDK** to download **android SDK** version **google_apis_playstore**
+
+- #### **AVD TOOLS**
+  + **List AVD Emulator** to list all **avd emulators** available
+  + **Create AVD Emulator** to create **new avd emulator**
+  + **Running AVD Emulator** to run **avd emulator**
+  + **Delete AVD Emulator** to remove **avd emulator**
+  + **Update AVD Emulator** to update **avd emulator**
+
+- #### **SOFTWARE TOOLS**
+  + **Java JDK** to download **java jdk** automatically
+  + **Android Studio** to download **android studio** automatically
+
+- #### **More Information**
+  + **developer related information** and support **project donation**
 
 ### How To Use:
 
-+ #### Menjalankan Aplikasi
-  - install android studio dan java jdk terlebih dahulu jika belum terinstall dilaptop/komputer anda melalui cli
-  - install java jdk versi jdk-8u261 [download disini](https://www.filehorse.com/download-java-development-kit-64/52937/) jika mengalami **error**
-  - upgrade `android studio` anda ke `versi 4.1` jika mengalami error saat mendownload **android sdk**
-  - copy path **android sdk** ke **environment system variables -> ANDROID_HOME** seperti ini jika belum
-  - copy path **java jdk** ke **environment system variables -> JAVA_HOME** seperti ini jika belum
-  - extract bang jago emulator.zip ke **Localdisk C:**
-  - properties **my computer -> advanced systems settings -> environment variables**
-  - copy path C:\bangjago ke **environment systems variables -> path**
-  - copy path C:\bangjago ke **environment systems variables -> bangjago**
-  - kemudian buka cmd dan ketikan **start bangjago**
-  - jika anda ingin menginstall `android studio` atau `java jdk` **run as** dibutuhkan
+#### 1. Running Application
 
-+ #### Terhubung Melalui USB Debugging
-  - sediakan kabel usb terlebih dahulu
-  - nyalakan pengaturan **usb debugging** pada smartphone anda
-  - pastikan smartphone anda sudah terhubung di **laptop/komputer**
-  - pilih **adb tools** kemudian pilih **add adb usb**
-  - masukan port default usb debugging sesuai **perangkat** tersebut
-  - kemudian jalankan emulator pilih **running emulator -> emulator usb**
-  - jika tidak terhubung pilih **adb tools -> restart adb** kemudian ulangi lagi dari awal
+- First, you must install andorid studio and java jdk if not installed on PC/Laptop over CLI
+- Install java jdk versi jdk-8u261 [Download Here](https://www.filehorse.com/download-java-development-kit-64/52937/) **If you encounter an error**
+- Upgrade `Android Studio` to `4.1 Version` If any Error encountered when you downloading **android sdk**
+- Download file over repository github Bangjago emulator choose **releases**
+- Extract bang jago emulator.zip to **Localdisk C**
+- Click properties my computer-> **advanced system settings -> environment variable**
+- Copy path **android sdk** to **environment system variable** -> **ANDROID_HOME**
+- Copy path **java jdk** to **environment system variable** -> **JAVA_HOME**
+- Copy path **C:\bangjago to environment system variable -> path**
+- Copy path **C:\bangjago to enironment system variabel -> bangjago**
+- You can open **cmd** and type **start bangjago**, don't use a terminal other than **cmd**
+- If you want to install `android studio` or `java jdk` **run as** is required
 
-+ #### Terhubung Melalui Wireless
-  - sediakan kabel usb terlebih dahulu
-  - kemudian masukan usb ke port **laptop/komputer** anda
-  - nyalakan pengaturan **usb debugging** pada smartphone anda
-  - pastikan smartphone anda sudah terhubung di **laptop/komputer**
-  - pilih **adb tools** kemudian pilih **adb wireless**
-  - masukan **ip address** default sesuai **perangkat** tersebut
-  - ketika emulator berhasil ditampilkan, cabut smartphone anda dari usb
-  - kemudian tutup emulator dan jalankan emulator kembali pilih **running emulator -> emulator wireless**
-  - jika tidak terhubung pilih **adb tools -> restart adb** kemudian ulangi lagi dari awal
+#### 2. Connected over USB Debugging
 
-+ #### Terhubung Melalui Emulator
-  - pilih **sdk tools** untuk mendownload **system-images** atau lewati cara ini, jika **system-images** sudah ada sebelumnya
-  - kemudian pilih **avd tools -> create emulator** atau lewati cara ini, jika **avd device** sudah ada sebelumnya
-  - kemudian jalankan emulator **pilih avd tools -> running emulator**
-  - kemudian masukan **nama emulator** yang sudah pernah dibuat sebelumnya
-  - android emulator berhasil dijalankan
+- First, you must Provide USB Cabel
+- Enable **USB Debugging** on your smartphone
+- Ensured your smartphone could connect on your **PC/Laptop**
+- Selected **adb tools** then choose **add add usb**
+- Select the default **USB debugging** port and **device**
+- Just running emulator -> emulator usb
+- If not connected then choosing **adb tools->restart adb** and repeat.
+
+#### 3. Connected over Wireless
+
+- First, you must provide USB cable
+- Plug USB to port **PC/Laptop**
+- Enable **USB Debugging** on your smartphone
+- Make sure your smartphone is connected
+- Selected **adb tools** then choose **add wireless**
+- Set **IP Address** default
+- If it works, unplug your smartphone from USB.
+- Close emulator and Run Emulator again **run emulator -> wireless emulator**
+- If not connected , you can select **adb tools -> restart adb** then repeat
+
+#### 4. Connected over Emulator.
+
+- Select **avd tools -> create emulator** then **android SDK** will be downloaded automatically
+- Skip the first **method** if **avd device** already exists
+- How to run the emulator **avd tool options -> then select run emulator**
+- Enter **emulator name** that was created before
 
 ### Default Port Device:
 
-Name                 | IP Address/Port|  Type    |
--------------------  | -------------- | -------- |
-Local                | 5555           | USB      |
-React Native         | 8081           | USB      |
-Flutter              | 8080           | USB      |
-Local                | 192.168.x.x    | Wireless |
-React Native         | 8.0.8.1        | Wireless |
-Flutter              | 8.0.8.0        | Wireless |
+| Name         | IP Address/Port | Type     |
+| ------------ | --------------- | -------- |
+| Local        | 5555            | USB      |
+| React Native | 8081            | USB      |
+| Flutter      | 8080            | USB      |
+| Local        | 192.168.x.x     | Wireless |
+| React Native | 8.0.8.1         | Wireless |
+| Flutter      | 8.0.8.0         | Wireless |
 
 ### System Images List:
 
-+ #### Google System Images
+- #### Google System Images
 
-  Android API Version  | Target Version | CPU Version |
-  -------------------  | -------------- | ----------- |
-  Android 16           | google_apis    | x86         |
-  Android 16           | google_apis    | armeabi-v7a |
-  Android 17           | google_apis    | x86         |
-  Android 17           | google_apis    | armeabi-v7a |
-  Android 18           | google_apis    | x86         |
-  Android 18           | google_apis    | armeabi-v7a |
-  Android 19           | google_apis    | x86         |
-  Android 19           | google_apis    | armeabi-v7a |
-  Android 21           | google_apis    | x86         |
-  Android 21           | google_apis    | x86_64      |
-  Android 21           | google_apis    | armeabi-v7a |
-  Android 22           | google_apis    | x86         |
-  Android 22           | google_apis    | x86_64      |
-  Android 22           | google_apis    | armeabi-v7a |
-  Android 23           | google_apis    | x86         |
-  Android 23           | google_apis    | x86_64      |
-  Android 23           | google_apis    | armeabi-v7a |
-  Android 24           | google_apis    | x86         |
-  Android 24           | google_apis    | x86_64      |
-  Android 24           | google_apis    | arm64-v8a   |
-  Android 25           | google_apis    | x86         |
-  Android 25           | google_apis    | x86_64      |
-  Android 25           | google_apis    | armeabi-v7a |
-  Android 25           | google_apis    | arm64-v8a   |
-  Android 26           | google_apis    | x86         |
-  Android 26           | google_apis    | x86_64      |
-  Android 27           | google_apis    | x86         |
-  Android 28           | google_apis    | x86_64      |
-  Android 29           | google_apis    | x86         |
-  Android 29           | google_apis    | x86_64      |
-  Android 30           | google_apis    | x86         |
-  Android 30           | google_apis    | x86_64      |
+  | Android API Version | Target Version | CPU Version |
+  | ------------------- | -------------- | ----------- |
+  | Android 16          | google_apis    | x86         |
+  | Android 16          | google_apis    | armeabi-v7a |
+  | Android 17          | google_apis    | x86         |
+  | Android 17          | google_apis    | armeabi-v7a |
+  | Android 18          | google_apis    | x86         |
+  | Android 18          | google_apis    | armeabi-v7a |
+  | Android 19          | google_apis    | x86         |
+  | Android 19          | google_apis    | armeabi-v7a |
+  | Android 21          | google_apis    | x86         |
+  | Android 21          | google_apis    | x86_64      |
+  | Android 21          | google_apis    | armeabi-v7a |
+  | Android 22          | google_apis    | x86         |
+  | Android 22          | google_apis    | x86_64      |
+  | Android 22          | google_apis    | armeabi-v7a |
+  | Android 23          | google_apis    | x86         |
+  | Android 23          | google_apis    | x86_64      |
+  | Android 23          | google_apis    | armeabi-v7a |
+  | Android 24          | google_apis    | x86         |
+  | Android 24          | google_apis    | x86_64      |
+  | Android 24          | google_apis    | arm64-v8a   |
+  | Android 25          | google_apis    | x86         |
+  | Android 25          | google_apis    | x86_64      |
+  | Android 25          | google_apis    | armeabi-v7a |
+  | Android 25          | google_apis    | arm64-v8a   |
+  | Android 26          | google_apis    | x86         |
+  | Android 26          | google_apis    | x86_64      |
+  | Android 27          | google_apis    | x86         |
+  | Android 28          | google_apis    | x86_64      |
+  | Android 29          | google_apis    | x86         |
+  | Android 29          | google_apis    | x86_64      |
+  | Android 30          | google_apis    | x86         |
+  | Android 30          | google_apis    | x86_64      |
 
-+ #### Default System Images
+- #### Default System Images
 
-  Android API Version  | Target Version | CPU Version |
-  -------------------  | -------------- | ----------- |
-  Android 16           | default        | x86         |
-  Android 16           | default        | armeabi-v7a |
-  Android 17           | default        | x86         |
-  Android 17           | default        | armeabi-v7a |
-  Android 18           | default        | x86         |
-  Android 18           | default        | armeabi-v7a |
-  Android 19           | default        | x86         |
-  Android 19           | default        | armeabi-v7a |
-  Android 21           | default        | x86         |
-  Android 21           | default        | x86_64      |
-  Android 21           | default        | armeabi-v7a |
-  Android 22           | default        | x86         |
-  Android 22           | default        | x86_64      |
-  Android 22           | default        | armeabi-v7a |
-  Android 23           | default        | x86         |
-  Android 23           | default        | x86_64      |
-  Android 23           | default        | armeabi-v7a |
-  Android 24           | default        | x86         |
-  Android 24           | default        | x86_64      |
-  Android 24           | default        | armeabi-v7a |
-  Android 25           | default        | x86         |
-  Android 25           | default        | x86_64      |
-  Android 26           | default        | x86         |
-  Android 26           | default        | x86_64      |
-  Android 27           | default        | x86         |
-  Android 27           | default        | x86_64      |
-  Android 28           | default        | x86         |
-  Android 28           | default        | x86_64      |
-  Android 30           | default        | x86         |
-  Android 30           | default        | x86_64      |
+  | Android API Version | Target Version | CPU Version |
+  | ------------------- | -------------- | ----------- |
+  | Android 16          | default        | x86         |
+  | Android 16          | default        | armeabi-v7a |
+  | Android 17          | default        | x86         |
+  | Android 17          | default        | armeabi-v7a |
+  | Android 18          | default        | x86         |
+  | Android 18          | default        | armeabi-v7a |
+  | Android 19          | default        | x86         |
+  | Android 19          | default        | armeabi-v7a |
+  | Android 21          | default        | x86         |
+  | Android 21          | default        | x86_64      |
+  | Android 21          | default        | armeabi-v7a |
+  | Android 22          | default        | x86         |
+  | Android 22          | default        | x86_64      |
+  | Android 22          | default        | armeabi-v7a |
+  | Android 23          | default        | x86         |
+  | Android 23          | default        | x86_64      |
+  | Android 23          | default        | armeabi-v7a |
+  | Android 24          | default        | x86         |
+  | Android 24          | default        | x86_64      |
+  | Android 24          | default        | armeabi-v7a |
+  | Android 25          | default        | x86         |
+  | Android 25          | default        | x86_64      |
+  | Android 26          | default        | x86         |
+  | Android 26          | default        | x86_64      |
+  | Android 27          | default        | x86         |
+  | Android 27          | default        | x86_64      |
+  | Android 28          | default        | x86         |
+  | Android 28          | default        | x86_64      |
+  | Android 30          | default        | x86         |
+  | Android 30          | default        | x86_64      |
 
-+ #### TV System Images
+- #### TV System Images
 
-  Android API Version  | Target Version | CPU Version |
-  -------------------  | -------------- | ----------- |
-  Android 21           | android-tv     | x86         |
-  Android 21           | android-tv     | armeabi-v7a |
-  Android 22           | android-tv     | x86         |
-  Android 23           | android-tv     | x86         |
-  Android 23           | android-tv     | armeabi-v7a |
-  Android 24           | android-tv     | x86         |
-  Android 25           | android-tv     | x86         |
-  Android 26           | android-tv     | x86         |
-  Android 27           | android-tv     | x86         |
-  Android 28           | android-tv     | x86         |
-  Android 29           | android-tv     | x86         |
+  | Android API Version | Target Version | CPU Version |
+  | ------------------- | -------------- | ----------- |
+  | Android 21          | android-tv     | x86         |
+  | Android 21          | android-tv     | armeabi-v7a |
+  | Android 22          | android-tv     | x86         |
+  | Android 23          | android-tv     | x86         |
+  | Android 23          | android-tv     | armeabi-v7a |
+  | Android 24          | android-tv     | x86         |
+  | Android 25          | android-tv     | x86         |
+  | Android 26          | android-tv     | x86         |
+  | Android 27          | android-tv     | x86         |
+  | Android 28          | android-tv     | x86         |
+  | Android 29          | android-tv     | x86         |
 
-+ #### Wear OS System Images
+- #### Wear OS System Images
 
-  Android API Version  | Target Version | CPU Version |
-  -------------------  | -------------- | ----------- |
-  Android 23           | android-wear   | x86         |
-  Android 23           | android-wear   | armeabi-v7a |
-  Android 25           | android-wear   | x86         |
-  Android 25           | android-wear   | armeabi-v7a |
-  Android 26           | android-wear   | x86         |
-  Android 28           | android-wear   | x86         |
+  | Android API Version | Target Version | CPU Version |
+  | ------------------- | -------------- | ----------- |
+  | Android 23          | android-wear   | x86         |
+  | Android 23          | android-wear   | armeabi-v7a |
+  | Android 25          | android-wear   | x86         |
+  | Android 25          | android-wear   | armeabi-v7a |
+  | Android 26          | android-wear   | x86         |
+  | Android 28          | android-wear   | x86         |
 
-+ #### Google Playstore System Images
+- #### Google Playstore System Images
 
-  Android API Version  | Target Version | CPU Version |
-  -------------------  | -------------- | ----------- |
-  Android 24           | google_apis_playstore  | x86     |
-  Android 25           | google_apis_playstore  | x86     |
-  Android 26           | google_apis_playstore  | x86     |
-  Android 27           | google_apis_playstore  | x86     |
-  Android 28           | google_apis_playstore  | x86     |
-  Android 28           | google_apis_playstore  | x86_64  |
-  Android 29           | google_apis_playstore  | x86     |
-  Android 29           | google_apis_playstore  | x86_64  |
-  Android 30           | google_apis_playstore  | x86     |
-  Android 30           | google_apis_playstore  | x86_64  |
-
+  | Android API Version | Target Version        | CPU Version |
+  | ------------------- | --------------------- | ----------- |
+  | Android 24          | google_apis_playstore | x86         |
+  | Android 25          | google_apis_playstore | x86         |
+  | Android 26          | google_apis_playstore | x86         |
+  | Android 27          | google_apis_playstore | x86         |
+  | Android 28          | google_apis_playstore | x86         |
+  | Android 28          | google_apis_playstore | x86_64      |
+  | Android 29          | google_apis_playstore | x86         |
+  | Android 29          | google_apis_playstore | x86_64      |
+  | Android 30          | google_apis_playstore | x86         |
+  | Android 30          | google_apis_playstore | x86_64      |
 
 ### Skin Device List:
 
-+ #### Default Phone Device
+- #### Default Phone Device
 
-   Name                   |  Ram    |  CPU Cores | Internal Storage |
-  ----------------------- | ------- | ---------- |  --------------- |
-  2.7_QVGA                | 1024 MB | 1 Core     | 2048 MB          |
-  2.7_QVGA_slider         | 1024 MB | 1 Core     | 2048 MB          |
-  3.2_QVGA_ADP2           | 1024 Mb | 1 Core     | 2048 MB          |
-  3.3_WQVGA               | 1024 Mb | 1 Core     | 2048 MB          |
-  3.4_WQVGA               | 1024 Mb | 1 Core     | 2048 MB          |
-  3.7_FWVGA_slider        | 1024 Mb | 1 Core     | 2048 MB          |
-  3.7_WVGA_Nexus_One      | 1024 Mb | 1 Core     | 2048 MB          |
-  4.7_WXGA                | 1024 Mb | 1 Core     | 2048 MB          |
-  4.65_720p_Galaxy_Nexus  | 1024 Mb | 1 Core     | 2048 MB          |
-  4_WVGA_Nexus_S          | 1024 Mb | 1 Core     | 2048 MB          |
-  5.1_WVGA                | 1024 Mb | 1 Core     | 2048 MB          |
-  5.1_WVGA_API            | 1024 Mb | 1 Core     | 2048 MB          |
-  5.4_FWVGA               | 1024 Mb | 1 Core     | 2048 MB          |
-  7.3_Foldable            | 2048 MB | 1 Core     | 4096 MB          |
-  8_Foldable              | 2048 MB | 1 Core     | 4096 MB          |
-  Galaxy_Nexus            | 1024 MB | 1 Core     | 2048 MB          |
-  Nexus_4                 | 2048 MB | 1 Core     | 4096 MB          |
-  Nexus_5                 | 2048 MB | 1 Core     | 4096 MB          |
-  Nexus_5X                | 2048 MB | 1 Core     | 4096 MB          |
-  Nexus_6                 | 2048 MB | 1 Core     | 4096 MB          |
-  Nexus_6P                | 2048 MB | 1 Core     | 4096 MB          |
-  Nexus_One               | 1024 MB | 1 Core     | 2048 MB          |
-  Nexus_S                 | 1024 MB | 1 Core     | 2048 MB          |
-  Pixel                   | 2048 MB | 1 Core     | 4096 MB          |
-  Pixel_2                 | 2048 MB | 1 Core     | 4096 MB          |
-  Pixel_2_XL              | 2048 MB | 1 Core     | 4096 MB          |
-  Pixel_3                 | 2048 MB | 1 Core     | 4096 MB          |
-  Pixel_3_XL              | 2048 MB | 1 Core     | 4096 MB          |
-  Pixel_3a                | 2048 MB | 1 Core     | 4096 MB          |
-  Pixel_3a_XL             | 2048 MB | 1 Core     | 4096 MB          |
-  Pixel_XL                | 2048 MB | 1 Core     | 4096 MB          |
+  | Name                   | Ram     | CPU Cores | Internal Storage |
+  | ---------------------- | ------- | --------- | ---------------- |
+  | 2.7_QVGA               | 1024 MB | 1 Core    | 2048 MB          |
+  | 2.7_QVGA_slider        | 1024 MB | 1 Core    | 2048 MB          |
+  | 3.2_QVGA_ADP2          | 1024 Mb | 1 Core    | 2048 MB          |
+  | 3.3_WQVGA              | 1024 Mb | 1 Core    | 2048 MB          |
+  | 3.4_WQVGA              | 1024 Mb | 1 Core    | 2048 MB          |
+  | 3.7_FWVGA_slider       | 1024 Mb | 1 Core    | 2048 MB          |
+  | 3.7_WVGA_Nexus_One     | 1024 Mb | 1 Core    | 2048 MB          |
+  | 4.7_WXGA               | 1024 Mb | 1 Core    | 2048 MB          |
+  | 4.65_720p_Galaxy_Nexus | 1024 Mb | 1 Core    | 2048 MB          |
+  | 4_WVGA_Nexus_S         | 1024 Mb | 1 Core    | 2048 MB          |
+  | 5.1_WVGA               | 1024 Mb | 1 Core    | 2048 MB          |
+  | 5.1_WVGA_API           | 1024 Mb | 1 Core    | 2048 MB          |
+  | 5.4_FWVGA              | 1024 Mb | 1 Core    | 2048 MB          |
+  | 7.3_Foldable           | 2048 MB | 1 Core    | 4096 MB          |
+  | 8_Foldable             | 2048 MB | 1 Core    | 4096 MB          |
+  | Galaxy_Nexus           | 1024 MB | 1 Core    | 2048 MB          |
+  | Nexus_4                | 2048 MB | 1 Core    | 4096 MB          |
+  | Nexus_5                | 2048 MB | 1 Core    | 4096 MB          |
+  | Nexus_5X               | 2048 MB | 1 Core    | 4096 MB          |
+  | Nexus_6                | 2048 MB | 1 Core    | 4096 MB          |
+  | Nexus_6P               | 2048 MB | 1 Core    | 4096 MB          |
+  | Nexus_One              | 1024 MB | 1 Core    | 2048 MB          |
+  | Nexus_S                | 1024 MB | 1 Core    | 2048 MB          |
+  | Pixel                  | 2048 MB | 1 Core    | 4096 MB          |
+  | Pixel_2                | 2048 MB | 1 Core    | 4096 MB          |
+  | Pixel_2_XL             | 2048 MB | 1 Core    | 4096 MB          |
+  | Pixel_3                | 2048 MB | 1 Core    | 4096 MB          |
+  | Pixel_3_XL             | 2048 MB | 1 Core    | 4096 MB          |
+  | Pixel_3a               | 2048 MB | 1 Core    | 4096 MB          |
+  | Pixel_3a_XL            | 2048 MB | 1 Core    | 4096 MB          |
+  | Pixel_XL               | 2048 MB | 1 Core    | 4096 MB          |
 
-  + #### Default Tablet Device
+  - #### Default Tablet Device
 
-   Name                   |  Ram    |  CPU Cores | Internal Storage |
-  ----------------------- | ------- | ---------- |  --------------- |
-  7_WSVGA_Tablet          | 1024 MB | 1 Core     | 2048 MB          |
-  10.1_WXGA_Tablet        | 1024 MB | 1 Core     | 2048 MB          |
-  Nexus_7                 | 2048 Mb | 1 Core     | 4096 MB          |
-  Nexus_7_2012            | 1024 Mb | 1 Core     | 2048 MB          |
-  Nexus_9                 | 2048 Mb | 1 Core     | 4096 MB          |
-  Nexus_10                | 2048 Mb | 1 Core     | 4096 MB          |
-  Pixel_C                 | 2048 Mb | 1 Core     | 4096 MB          |
+  | Name             | Ram     | CPU Cores | Internal Storage |
+  | ---------------- | ------- | --------- | ---------------- |
+  | 7_WSVGA_Tablet   | 1024 MB | 1 Core    | 2048 MB          |
+  | 10.1_WXGA_Tablet | 1024 MB | 1 Core    | 2048 MB          |
+  | Nexus_7          | 2048 Mb | 1 Core    | 4096 MB          |
+  | Nexus_7_2012     | 1024 Mb | 1 Core    | 2048 MB          |
+  | Nexus_9          | 2048 Mb | 1 Core    | 4096 MB          |
+  | Nexus_10         | 2048 Mb | 1 Core    | 4096 MB          |
+  | Pixel_C          | 2048 Mb | 1 Core    | 4096 MB          |
 
-    + #### Default TV Device
+  - #### Default TV Device
 
-   Name                   |  Ram    |  CPU Cores | Internal Storage |
-  ----------------------- | ------- | ---------- |  --------------- |
-  Android_Wear_Round      | 1024 MB | 1 Core     | 2048 MB          |
-  Android_Wear_Round_Chin | 1024 MB | 1 Core     | 2048 MB          |
-  Android_Wear_Square     | 1024 MB | 1 Core     | 2048 MB          |
+  | Name                    | Ram     | CPU Cores | Internal Storage |
+  | ----------------------- | ------- | --------- | ---------------- |
+  | Android_Wear_Round      | 1024 MB | 1 Core    | 2048 MB          |
+  | Android_Wear_Round_Chin | 1024 MB | 1 Core    | 2048 MB          |
+  | Android_Wear_Square     | 1024 MB | 1 Core    | 2048 MB          |
 
+### Support Project:
+
+If you like **this project** or you want to **support this project**, you can **treat me to a cup of coffee** or you can **donate** via the following link **[Donate](https://bit.ly/37KsgkB)**.
 
 ### Video Tutorial:
-+ [Tutorial](https://bit.ly/2G5KUYR)
 
-### Buy A Cup Of Coffee
-+ [Traktir Segelas Kopi](https://bit.ly/37KsgkB)
+- [Tutorial](https://bit.ly/2G5KUYR)
 
-### Author:
+### Author && Contributor:
 
-+ [Restu Wahyu Saputra](https://github.com/restuwahyu13)
+- [Restu Wahyu Saputra](https://github.com/restuwahyu13)
+- [Vicri Kurniawan](https://github.com/vicrfiport)
 
 ### LICENSE:
-+ [MIT](https://github.com/restuwahyu13/bangjago-emulator/blob/main/LICENSE.MD)
+
+- [MIT](https://github.com/restuwahyu13/bangjago-emulator/blob/main/LICENSE.MD)
