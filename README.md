@@ -13,7 +13,7 @@
 - [x] Connected over USB and Wireless.
 - [x] Connected over Android Emulator
 - [x] Installation Android Studio and Java JDK Supported automatically
-- [x] Supported for things like React Native, Native, Ionic, Native Script etc.
+- [x] Support for like React Native, Flutter, Ionic, Native Script etc.
 
 ### Command:
 - #### **ADB TOOLS**
