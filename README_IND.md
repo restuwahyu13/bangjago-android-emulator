@@ -8,12 +8,12 @@
 
 ### Features:
 
-- sangat mudah digunakan
-- daya penggunaan cpu dan ram yang rendah
-- terhubung melalui usb dan wireless
-- terhubung melalui android emulator
-- instalasi software pendukung secara otomatis
-- support untuk React Native, Flutter, Ionic, Native Script etc
+- [x] sangat mudah digunakan
+- [x] daya penggunaan cpu dan ram yang rendah
+- [x] terhubung melalui usb dan wireless
+- [x] terhubung melalui android emulator
+- [x] instalasi Android Studio dan Java JDK secara otomatis
+- [x] support untuk React Native, Flutter, Ionic, Native Script etc
 
 ### Command:
 - #### **ADB TOOLS**
@@ -82,7 +82,7 @@
   - ketika emulator berhasil ditampilkan, cabut smartphone anda dari usb
   - kemudian tutup emulator dan jalankan emulator kembali pilih **running emulator -> emulator wireless**
   - jika tidak terhubung pilih **adb tools -> restart adb** kemudian ulangi lagi dari awal
-  - atau ikuti tutorial berikut ini **[React Native](https://tinyurl.com/y6rvxsln)** dan **[Flutter](https://tinyurl.com/yxwpy7w7)**
+  - atau ikuti tutorial berikut ini **[React Native](https://tinyurl.com/y6rvxsln)** atau **[Flutter](https://tinyurl.com/yxwpy7w7)**
 
 - #### Terhubung Melalui Emulator
   - pilih **avd tools -> create emulator** maka nanti **Android SDK** akan didownload secara otomatis

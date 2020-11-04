@@ -8,12 +8,12 @@
 
 ### Features:
 
-- Effeciency Management RAM and CPU
-- Connected over USB and Wireless.
-- Connected over Android Emulator
-- Installation Software Supported automatically
-- Easy To Use
-- Supported for things like React Native, Native, Ionic, Native Script etc.
+- [x] Easy To Use
+- [x] Effeciency Management RAM and CPU
+- [x] Connected over USB and Wireless.
+- [x] Connected over Android Emulator
+- [x] Installation Android Studio and Java JDK Supported automatically
+- [x] Supported for things like React Native, Native, Ionic, Native Script etc.
 
 ### Command:
 - #### **ADB TOOLS**
@@ -82,7 +82,7 @@
 - If it works, unplug your smartphone from USB.
 - Close emulator and Run Emulator again **run emulator -> wireless emulator**
 - If not connected , you can select **adb tools -> restart adb** then repeat
-- or follow the tutorial below **[React Native](https://tinyurl.com/y6rvxsln)** and **[Flutter](https://tinyurl.com/yxwpy7w7)**
+- or follow the tutorial below **[React Native](https://tinyurl.com/y6rvxsln)** or **[Flutter](https://tinyurl.com/yxwpy7w7)**
 
 #### 4. Connected over Emulator.
 
