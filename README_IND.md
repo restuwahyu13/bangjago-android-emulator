@@ -82,6 +82,7 @@
   - ketika emulator berhasil ditampilkan, cabut smartphone anda dari usb
   - kemudian tutup emulator dan jalankan emulator kembali pilih **running emulator -> emulator wireless**
   - jika tidak terhubung pilih **adb tools -> restart adb** kemudian ulangi lagi dari awal
+  - atau ikuti tutorial berikut ini **[React Native](https://tinyurl.com/y6rvxsln)** dan **[Flutter](https://tinyurl.com/yxwpy7w7)**
 
 - #### Terhubung Melalui Emulator
   - pilih **avd tools -> create emulator** maka nanti **Android SDK** akan didownload secara otomatis

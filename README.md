@@ -82,6 +82,7 @@
 - If it works, unplug your smartphone from USB.
 - Close emulator and Run Emulator again **run emulator -> wireless emulator**
 - If not connected , you can select **adb tools -> restart adb** then repeat
+- or follow the tutorial below **[React Native](https://tinyurl.com/y6rvxsln)** and **[Flutter](https://tinyurl.com/yxwpy7w7)**
 
 #### 4. Connected over Emulator.
 
