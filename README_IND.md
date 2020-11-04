@@ -99,8 +99,8 @@
 | React Native | 8081            | USB      |
 | Flutter      | 8080            | USB      |
 | Local        | 192.168.x.x     | Wireless |
-| React Native | 8.0.8.1         | Wireless |
-| Flutter      | 8.0.8.0         | Wireless |
+| React Native | 192.168.x.x     | Wireless |
+| Flutter      | 192.168.x.x     | Wireless |
 
 ### System Images List:
 
