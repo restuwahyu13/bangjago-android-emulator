@@ -9,7 +9,7 @@
 - [Get Started](#get-started)
   - [Features](#Features)
   - [Command](#Command)
-  - [How To Use](How-To-Use)
+  - [How To Use](#How-To-Use)
   - [Default Port Device](#Default-Port-Device)
   - [System Images List](#System-Images-List)
   - [Skin Device List](#Skin-Device-List)
@@ -315,3 +315,7 @@ If you like **this project** or you want to **support this project**, you can **
 ### License:
 
 - [MIT](https://github.com/restuwahyu13/bangjago-emulator/blob/main/LICENSE.MD)
+
+<p align="right" style="padding: 5px; border-radius: 100%; background-color: red; font-size: 2rem;">
+  <b><a href="#React-Fakers">BACK TO TOP</a></b>
+</p>
