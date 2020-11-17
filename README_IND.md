@@ -317,5 +317,5 @@ Jika anda suka dengan **project ini** atau anda ingin **mensupport project ini**
 - [MIT](https://github.com/restuwahyu13/bangjago-emulator/blob/main/LICENSE.MD)
 
 <p align="right" style="padding: 5px; border-radius: 100%; background-color: red; font-size: 2rem;">
-  <b><a href="#React-Fakers">BACK TO TOP</a></b>
+  <b><a href="#Bang-Jago-Android-Emulator">BACK TO TOP</a></b>
 </p>
