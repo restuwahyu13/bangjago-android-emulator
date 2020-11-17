@@ -2,6 +2,8 @@
 
 **Bangjago Emulator** adalah aplikasi cli sederhana yang digunakan untuk **Pegembangan Mobile Development**, yang dimana fungsinya itu sebagai **Android Emulator**, fungsinya kurang lebih sama seperti dengan **Genymotion** walaupun tidak sebagus seperti **Genymotion** dan saya menambahkan beberapa fiture yang tidak ada di **Genymotion**, seperti terhubung dengan **USB Debugging** dan **Wireless** menggunakan **Perangkat Seluler** anda untuk **Pegembangan Mobile Development**, untuk saat ini hanya tersedia untuk pengguna **Windows** saja, di lain waktu mungkin saya akan membuatnya untuk versi **Mac OS atau Linux**.
 
+<img src="./cover.gif" alt="logo"/>
+
 ### Language:
 
 - [English Language](https://github.com/restuwahyu13/bangjago-android-emulator)
