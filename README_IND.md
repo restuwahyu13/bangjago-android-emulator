@@ -1,4 +1,4 @@
-## Bang Jago Android Emulator (CLI Version)
+## Bangjago Android Emulator (CLI Version)
 
 **Bangjago Emulator** adalah aplikasi cli sederhana yang digunakan untuk **Pegembangan Mobile Development**, yang dimana fungsinya itu sebagai **Android Emulator**, fungsinya kurang lebih sama seperti dengan **Genymotion** walaupun tidak sebagus seperti **Genymotion** dan saya menambahkan beberapa fiture yang tidak ada di **Genymotion**, seperti terhubung dengan **USB Debugging** dan **Wireless** menggunakan **Perangkat Seluler** anda untuk **Pegembangan Mobile Development**, untuk saat ini hanya tersedia untuk pengguna **Windows** saja, di lain waktu mungkin saya akan membuatnya untuk versi **Mac OS atau Linux**.
 
@@ -317,5 +317,5 @@ Jika anda suka dengan **project ini** atau anda ingin **mensupport project ini**
 - [MIT](https://github.com/restuwahyu13/bangjago-emulator/blob/main/LICENSE.MD)
 
 <p align="right" style="padding: 5px; border-radius: 100%; background-color: red; font-size: 2rem;">
-  <b><a href="#Bang-Jago-Android-Emulator">BACK TO TOP</a></b>
+  <b><a href="#Bangjago-Android-Emulator-(CLI Version)">BACK TO TOP</a></b>
 </p>
