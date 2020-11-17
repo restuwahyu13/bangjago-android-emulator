@@ -4,9 +4,21 @@
 
 <img src="./cover.gif" alt="logo"/>
 
-### Language:
+## Table Of Content
 
-- [English Language](https://github.com/restuwahyu13/bangjago-android-emulator)
+- [Get Started](#get-started)
+  - [Features](#Features)
+  - [Command](#Command)
+  - [How To Use](How-To-Use)
+  - [Default Port Device](#Default-Port-Device)
+  - [System Images List](#System-Images-List)
+  - [Skin Device List](#Skin-Device-List)
+  - [Translate](#Translate)
+  - [Support Project](#Support-Project)
+  - [Video Tutorial](#Video-Tutorial)
+  - [Author](#Author)
+  - [Contributor](#Contributor)
+  - [License](#License)
 
 ### Features:
 
@@ -278,6 +290,11 @@
   | Android_Wear_Round_Chin | 1024 MB | 1 Core    | 2048 MB          |
   | Android_Wear_Square     | 1024 MB | 1 Core    | 2048 MB          |
 
+### Translate:
+
+- [Indonesian](https://github.com/restuwahyu13/bangjago-android-emulator/blob/main/README_IND.md)
+- [English](https://github.com/restuwahyu13/bangjago-android-emulator/blob/main/README.md)
+
 ### Support Project:
 
 Jika anda suka dengan **project ini** atau anda ingin **mensupport project ini**, anda bisa **mentraktir saya secangkir kopi** atau bisa **berdonasi** melalu link berikut ini **[Donate](https://bit.ly/37KsgkB)**.
@@ -287,11 +304,14 @@ Jika anda suka dengan **project ini** atau anda ingin **mensupport project ini**
 - [Tutorial](https://bit.ly/2G5KUYR)
 
 
-### Author && Contributor:
+### Author:
 
 - [Restu Wahyu Saputra](https://github.com/restuwahyu13)
+
+### Contributor:
+
 - [Vicri Kurniawan](https://github.com/vicrfiport)
 
-### LICENSE:
+### License:
 
 - [MIT](https://github.com/restuwahyu13/bangjago-emulator/blob/main/LICENSE.MD)

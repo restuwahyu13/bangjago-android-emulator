@@ -4,9 +4,21 @@
 
 <img src="./cover.gif" alt="logo"/>
 
-### Language:
+## Table Of Content
 
-- [Indonesian Language](https://github.com/restuwahyu13/bangjago-android-emulator/blob/main/README_IND.md)
+- [Get Started](#get-started)
+  - [Features](#Features)
+  - [Command](#Command)
+  - [How To Use](How-To-Use)
+  - [Default Port Device](#Default-Port-Device)
+  - [System Images List](#System-Images-List)
+  - [Skin Device List](#Skin-Device-List)
+  - [Translate](#Translate)
+  - [Support Project](#Support-Project)
+  - [Video Tutorial](#Video-Tutorial)
+  - [Author](#Author)
+  - [Contributor](#Contributor)
+  - [License](#License)
 
 ### Features:
 
@@ -18,6 +30,7 @@
 - [x] Support for like React Native, Flutter, Ionic, Native Script etc.
 
 ### Command:
+
 - #### **ADB TOOLS**
   + **Add Adb USB** is used to add **usb debugging port**
   + **Add Adb Wireless** is used to add **ip address**
@@ -278,6 +291,11 @@
   | Android_Wear_Round_Chin | 1024 MB | 1 Core    | 2048 MB          |
   | Android_Wear_Square     | 1024 MB | 1 Core    | 2048 MB          |
 
+### Translate:
+
+- [Indonesian](https://github.com/restuwahyu13/bangjago-android-emulator/blob/main/README_IND.md)
+- [English](https://github.com/restuwahyu13/bangjago-android-emulator/blob/main/README.md)
+
 ### Support Project:
 
 If you like **this project** or you want to **support this project**, you can **treat me to a cup of coffee** or you can **donate** via the following link **[Donate](https://bit.ly/37KsgkB)**.
@@ -286,11 +304,14 @@ If you like **this project** or you want to **support this project**, you can **
 
 - [Tutorial](https://bit.ly/2G5KUYR)
 
-### Author && Contributor:
+### Author:
 
 - [Restu Wahyu Saputra](https://github.com/restuwahyu13)
+
+### Contributor:
+
 - [Vicri Kurniawan](https://github.com/vicrfiport)
 
-### LICENSE:
+### License:
 
 - [MIT](https://github.com/restuwahyu13/bangjago-emulator/blob/main/LICENSE.MD)
