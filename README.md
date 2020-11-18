@@ -4,7 +4,8 @@
 
 <img src="./cover.gif" alt="logo"/>
 
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![HitCount](http://hits.dwyl.com/restuwahyu13/bangjago-android-emulator.svg)](http://hits.dwyl.com/restuwahyu13/bangjago-android-emulator)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/restuwahyu13/bangjago-android-emulator) [![tag](https://img.shields.io/github/tag/restuwahyu13/bangjago-android-emulator.svg)](https://github.com/restuwahyu13/bangjago-android-emulator) [![Stars](https://img.shields.io/github/stars/restuwahyu13/bangjago-android-emulator)](https://img.shields.io/github/stars/restuwahyu13/bangjago-android-emulator) [![Forks](https://img.shields.io/github/forks/restuwahyu13/bangjago-android-emulator)](https://img.shields.io/github/forks/restuwahyu13/bangjago-android-emulator) 
+
 
 ## Table Of Content 
 
