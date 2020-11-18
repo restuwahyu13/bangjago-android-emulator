@@ -4,7 +4,9 @@
 
 <img src="./cover.gif" alt="logo"/>
 
-## Table Of Content
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![HitCount](http://hits.dwyl.com/restuwahyu13/bangjago-android-emulator.svg)](http://hits.dwyl.com/restuwahyu13/bangjago-android-emulator)
+
+## Table Of Content 
 
 - [Get Started](#get-started)
   - [Features](#Features)
