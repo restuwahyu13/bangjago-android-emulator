@@ -26,10 +26,11 @@
 ### Features:
 
 - [x] Easy To Use
+- [x] Fast Booting
 - [x] Effeciency Management RAM and CPU
-- [x] Connected over USB and Wireless.
+- [x] Connected over USB and Wireless
 - [x] Connected over Android Emulator
-- [x] Installation Android Studio and Java JDK Supported automatically
+- [x] Installation Software Supported automatically
 - [x] Support for like React Native, Flutter, Ionic, Native Script etc.
 
 ### Command:
