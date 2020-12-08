@@ -3072,15 +3072,15 @@ echo off &echo.&echo off
 echo off &echo.&echo off
 
 if not exist "%localappdata%\Android\Sdk\sources" (
-   call sdkmanager --install "sources;android-25" --channel=0
+   call sdkmanager --install "sources;android-26" --channel=0
    msg %username% 'android sources build tools successfully to download'
    goto sdkTools
 ) else (
-  if exist "%localappdata%\Android\Sdk\sources\android-25" (
+  if exist "%localappdata%\Android\Sdk\sources\android-26" (
     msg %username% 'android sources build tools already exist'
     goto asdksToolsOreoTools
   ) else (
-    call sdkmanager --install "sources;android-25" --channel=0
+    call sdkmanager --install "sources;android-26" --channel=0
     msg %username% 'android sources build tools successfully to download'
     goto sdkTools
   )
@@ -3096,15 +3096,15 @@ echo off &echo.&echo off
 echo off &echo.&echo off
 
 if not exist "%localappdata%\Android\Sdk\sources" (
-   call sdkmanager --install "sources;android-26" --channel=0
+   call sdkmanager --install "sources;android-27" --channel=0
    msg %username% 'android sources build tools successfully to download'
    goto sdkTools
 ) else (
-  if exist "%localappdata%\Android\Sdk\sources\android-26" (
+  if exist "%localappdata%\Android\Sdk\sources\android-27" (
     msg %username% 'android sources build tools already exist'
     goto asdksToolsOreoTools
   ) else (
-    call sdkmanager --install "sources;android-26" --channel=0
+    call sdkmanager --install "sources;android-27" --channel=0
     msg %username% 'android sources build tools successfully to download'
     goto sdkTools
   )
