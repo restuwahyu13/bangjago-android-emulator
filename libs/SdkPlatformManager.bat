@@ -127,6 +127,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-16;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-16"
+   call sdkmanager --install "sources;android-16" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-16" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -138,6 +140,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-16;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-16"
+    call sdkmanager --install "sources;android-16" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-16" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -159,6 +163,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
     call sdkmanager system-images;android-17;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-17"
+    call sdkmanager --install "sources;android-17" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-17" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -170,6 +176,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-17;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-17"
+    call sdkmanager --install "sources;android-17" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-17" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -191,6 +199,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-18;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-18"
+   call sdkmanager --install "sources;android-18" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-18" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -202,6 +212,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-18;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-18"
+    call sdkmanager --install "sources;android-18" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-18" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -223,6 +235,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-16;google_apis;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-16"
+   call sdkmanager --install "sources;android-16" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-16" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -234,6 +248,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-16;google_apis;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-16"
+    call sdkmanager --install "sources;android-16" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-16" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -255,6 +271,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-17;google_apis;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-17"
+   call sdkmanager --install "sources;android-17" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-17" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -266,6 +284,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-17;google_apis;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-17"
+    call sdkmanager --install "sources;android-17" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-17" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -287,6 +307,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-18;google_apis;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-18"
+   call sdkmanager --install "sources;android-18" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-18" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -298,6 +320,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-18;google_apis;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-18"
+    call sdkmanager --install "sources;android-18" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-18" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -346,6 +370,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-19;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-19"
+   call sdkmanager --install "sources;android-19" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-19" --channel=0
+   call sdkmanager --install "build-tools;19.1.0" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -357,6 +384,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-19;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-19"
+    call sdkmanager --install "sources;android-19" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-19" --channel=0
+    call sdkmanager --install "build-tools;19.1.0" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -378,6 +408,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-19;google_apis;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-19"
+   call sdkmanager --install "sources;android-19" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-19" --channel=0
+   call sdkmanager --install "build-tools;19.1.0" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -389,6 +422,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-19;google_apis;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-19"
+    call sdkmanager --install "sources;android-19" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-19" --channel=0
+    call sdkmanager --install "build-tools;19.1.0" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -445,6 +481,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-21;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-21"
+   call sdkmanager --install "sources;android-21" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+   call sdkmanager --install "build-tools;21.1.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -456,6 +495,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-21;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-21"
+    call sdkmanager --install "sources;android-21" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+    call sdkmanager --install "build-tools;21.1.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -477,6 +519,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-22;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-22"
+   call sdkmanager --install "sources;android-22" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+   call sdkmanager --install "build-tools;22.0.1" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -488,6 +533,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-22;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-22"
+    call sdkmanager --install "sources;android-22" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+    call sdkmanager --install "build-tools;22.0.1" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -509,6 +557,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-21;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-21"
+   call sdkmanager --install "sources;android-21" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+   call sdkmanager --install "build-tools;21.1.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -520,6 +571,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-21;google_apis;x86_64
     call sdkmanager "platform-tools" "platforms;android-21"
+    call sdkmanager --install "sources;android-21" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+    call sdkmanager --install "build-tools;21.1.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -541,6 +595,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-22;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-22"
+   call sdkmanager --install "sources;android-22" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+   call sdkmanager --install "build-tools;22.0.1" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -552,6 +609,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-22;google_apis;x86_64
     call sdkmanager "platform-tools" "platforms;android-22"
+    call sdkmanager --install "sources;android-22" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+    call sdkmanager --install "build-tools;22.0.1" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -573,6 +633,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-21;google_apis;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-21"
+   call sdkmanager --install "sources;android-21" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+   call sdkmanager --install "build-tools;21.1.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -584,6 +647,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-21;google_apis;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-21"
+    call sdkmanager --install "sources;android-21" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+    call sdkmanager --install "build-tools;21.1.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -605,6 +671,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-22;google_apis;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-22"
+   call sdkmanager --install "sources;android-22" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+   call sdkmanager --install "build-tools;22.0.1" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -616,6 +685,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-22;google_apis;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-22"
+    call sdkmanager --install "sources;android-22" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+    call sdkmanager --install "build-tools;22.0.1" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -666,6 +738,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-23;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-23"
+   call sdkmanager --install "sources;android-23" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+   call sdkmanager --install "build-tools;23.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -677,6 +752,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-23;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager --install "sources;android-23" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+    call sdkmanager --install "build-tools;23.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -698,6 +776,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-23;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-23"
+   call sdkmanager --install "sources;android-23" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+   call sdkmanager --install "build-tools;23.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -709,6 +790,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-23;google_apis;x86_64
     call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager --install "sources;android-23" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+    call sdkmanager --install "build-tools;23.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -730,6 +814,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-23;google_apis;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-23"
+   call sdkmanager --install "sources;android-23" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+   call sdkmanager --install "build-tools;23.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -741,6 +828,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-23;google_apis;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager --install "sources;android-23" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+    call sdkmanager --install "build-tools;23.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -797,6 +887,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-24;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-24"
+   call sdkmanager --install "sources;android-24" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+   call sdkmanager --install "build-tools;24.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -808,6 +901,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-24;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-24"
+    call sdkmanager --install "sources;android-24" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+    call sdkmanager --install "build-tools;24.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -829,6 +925,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-25;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-25"
+   call sdkmanager --install "sources;android-25" --channel=0
+   call sdkmanager --install "build-tools;25.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -840,6 +938,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-25;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-25"
+    call sdkmanager --install "sources;android-25" --channel=0
+    call sdkmanager --install "build-tools;25.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -861,6 +961,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-24;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-24"
+   call sdkmanager --install "sources;android-24" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+   call sdkmanager --install "build-tools;24.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -872,6 +975,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-24;google_apis;x86_64
     call sdkmanager "platform-tools" "platforms;android-24"
+    call sdkmanager --install "sources;android-24" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+    call sdkmanager --install "build-tools;24.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -893,6 +999,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-25;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-25"
+   call sdkmanager --install "sources;android-25" --channel=0
+   call sdkmanager --install "build-tools;25.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -904,6 +1012,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-25;google_apis;x86_64
     call sdkmanager "platform-tools" "platforms;android-25"
+    call sdkmanager --install "sources;android-25" --channel=0
+    call sdkmanager --install "build-tools;25.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -925,6 +1035,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-24;google_apis;arm64-v8a
    call sdkmanager "platform-tools" "platforms;android-24"
+   call sdkmanager --install "sources;android-24" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+   call sdkmanager --install "build-tools;24.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -936,6 +1049,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-24;google_apis;arm64-v8a
     call sdkmanager "platform-tools" "platforms;android-24"
+    call sdkmanager --install "sources;android-24" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+    call sdkmanager --install "build-tools;24.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -957,6 +1073,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-25;google_apis;arm64-v8a
    call sdkmanager "platform-tools" "platforms;android-25"
+   call sdkmanager --install "sources;android-25" --channel=0
+   call sdkmanager --install "build-tools;25.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -968,6 +1086,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-25;google_apis;arm64-v8a
     call sdkmanager "platform-tools" "platforms;android-25"
+    call sdkmanager --install "sources;android-25" --channel=0
+    call sdkmanager --install "build-tools;25.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1020,6 +1140,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-26;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-26"
+   call sdkmanager --install "sources;android-26" --channel=0
+   call sdkmanager --install "build-tools;26.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1031,6 +1153,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-26;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-26"
+    call sdkmanager --install "sources;android-26" --channel=0
+    call sdkmanager --install "build-tools;26.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1052,6 +1176,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-27;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-27"
+   call sdkmanager --install "sources;android-27" --channel=0
+   call sdkmanager --install "build-tools;27.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1063,6 +1189,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-27;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-27"
+    call sdkmanager --install "sources;android-27" --channel=0
+    call sdkmanager --install "build-tools;27.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1084,6 +1212,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-26;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-26"
+   call sdkmanager --install "sources;android-26" --channel=0
+   call sdkmanager --install "build-tools;26.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1095,6 +1225,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-26;google_apis;x86_64
     call sdkmanager "platform-tools" "platforms;android-26"
+    call sdkmanager --install "sources;android-26" --channel=0
+    call sdkmanager --install "build-tools;26.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1116,6 +1248,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-27;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-27"
+   call sdkmanager --install "sources;android-27" --channel=0
+   call sdkmanager --install "build-tools;27.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1127,6 +1261,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-27;google_apis;x86_64
     call sdkmanager "platform-tools" "platforms;android-27"
+    call sdkmanager --install "sources;android-27" --channel=0
+    call sdkmanager --install "build-tools;27.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1173,6 +1309,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-28;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-28"
+   call sdkmanager --install "sources;android-28" --channel=0
+   call sdkmanager --install "build-tools;28.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1184,6 +1322,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-28;google_apis;x86_64
     call sdkmanager "platform-tools" "platforms;android-28"
+    call sdkmanager --install "sources;android-28" --channel=0
+    call sdkmanager --install "build-tools;28.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1232,6 +1372,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-29;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-29"
+   call sdkmanager --install "sources;android-29" --channel=0
+   call sdkmanager --install "build-tools;29.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1243,6 +1385,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-29;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-29"
+    call sdkmanager --install "sources;android-29" --channel=0
+    call sdkmanager --install "build-tools;29.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1264,6 +1408,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-29;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-29"
+   call sdkmanager --install "sources;android-29" --channel=0
+   call sdkmanager --install "build-tools;29.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1275,6 +1421,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-29;google_apis;x86_64
     call sdkmanager "platform-tools" "platforms;android-29"
+    call sdkmanager --install "sources;android-29" --channel=0
+    call sdkmanager --install "build-tools;29.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1323,6 +1471,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-30;google_apis;x86
    call sdkmanager "platform-tools" "platforms;android-30"
+   call sdkmanager --install "sources;android-30" --channel=0
+   call sdkmanager --install "build-tools;30.0.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1334,6 +1484,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-30;google_apis;x86
     call sdkmanager "platform-tools" "platforms;android-30"
+    call sdkmanager --install "sources;android-30" --channel=0
+    call sdkmanager --install "build-tools;30.0.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1355,6 +1507,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-30;google_apis;x86_64
    call sdkmanager "platform-tools" "platforms;android-30"
+   call sdkmanager --install "sources;android-30" --channel=0
+   call sdkmanager --install "build-tools;30.0.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1366,6 +1520,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-30;google_apis;x86_64
     call sdkmanager "platform-tools" "platforms;android-30"
+    call sdkmanager --install "sources;android-30" --channel=0
+    call sdkmanager --install "build-tools;30.0.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1459,6 +1615,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-16;default;x86
    call sdkmanager "platform-tools" "platforms;android-16"
+   call sdkmanager --install "sources;android-16" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-16" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1470,6 +1628,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-16;default;x86
     call sdkmanager "platform-tools" "platforms;android-16"
+    call sdkmanager --install "sources;android-16" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-16" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1491,6 +1651,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-17;default;x86
    call sdkmanager "platform-tools" "platforms;android-17"
+   call sdkmanager --install "sources;android-17" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-17" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1502,6 +1664,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-17;default;x86
     call sdkmanager "platform-tools" "platforms;android-17"
+    call sdkmanager --install "sources;android-17" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-17" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1523,6 +1687,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-18;default;x86
    call sdkmanager "platform-tools" "platforms;android-18"
+   call sdkmanager --install "sources;android-18" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-18" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1534,6 +1700,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-18;default;x86
     call sdkmanager "platform-tools" "platforms;android-18"
+    call sdkmanager --install "sources;android-18" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-18" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1555,6 +1723,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-16;default;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-16"
+   call sdkmanager --install "sources;android-16" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-16" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1566,6 +1736,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-16;default;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-16"
+    call sdkmanager --install "sources;android-16" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-16" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1587,6 +1759,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-17;default;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-17"
+   call sdkmanager --install "sources;android-17" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-17" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1598,6 +1772,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-17;default;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-17"
+    call sdkmanager --install "sources;android-17" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-17" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1619,6 +1795,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-18;default;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-18"
+   call sdkmanager --install "sources;android-18" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-18" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1630,6 +1808,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-18;default;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-18"
+    call sdkmanager --install "sources;android-18" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-18" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1678,6 +1858,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-19;default;x86
    call sdkmanager "platform-tools" "platforms;android-19"
+   call sdkmanager --install "sources;android-19" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-19" --channel=0
+   call sdkmanager --install "build-tools;19.1.0" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1689,6 +1872,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-19;default;x86
     call sdkmanager "platform-tools" "platforms;android-19"
+    call sdkmanager --install "sources;android-19" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-19" --channel=0
+    call sdkmanager --install "build-tools;19.1.0" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1710,6 +1896,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-19;default;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-19"
+   call sdkmanager --install "sources;android-19" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-19" --channel=0
+   call sdkmanager --install "build-tools;19.1.0" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1721,6 +1910,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-19;default;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-19"
+    call sdkmanager --install "sources;android-19" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-19" --channel=0
+    call sdkmanager --install "build-tools;19.1.0" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1777,6 +1969,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-21;default;x86
    call sdkmanager "platform-tools" "platforms;android-21"
+   call sdkmanager --install "sources;android-21" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+   call sdkmanager --install "build-tools;21.1.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1788,6 +1983,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-21;default;x86
     call sdkmanager "platform-tools" "platforms;android-21"
+    call sdkmanager --install "sources;android-21" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+    call sdkmanager --install "build-tools;21.1.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1809,6 +2007,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-22;default;x86
    call sdkmanager "platform-tools" "platforms;android-22"
+   call sdkmanager --install "sources;android-22" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+   call sdkmanager --install "build-tools;22.0.1" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1820,6 +2021,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-22;default;x86
     call sdkmanager "platform-tools" "platforms;android-22"
+    call sdkmanager --install "sources;android-22" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+    call sdkmanager --install "build-tools;22.0.1" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1841,6 +2045,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-21;default;x86_64
    call sdkmanager "platform-tools" "platforms;android-21"
+   call sdkmanager --install "sources;android-21" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+   call sdkmanager --install "build-tools;21.1.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1852,6 +2059,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-21;default;x86_64
     call sdkmanager "platform-tools" "platforms;android-21"
+    call sdkmanager --install "sources;android-21" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+    call sdkmanager --install "build-tools;21.1.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1873,6 +2083,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-22;default;x86_64
    call sdkmanager "platform-tools" "platforms;android-22"
+   call sdkmanager --install "sources;android-22" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+   call sdkmanager --install "build-tools;22.0.1" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1884,6 +2097,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-22;default;x86_64
     call sdkmanager "platform-tools" "platforms;android-22"
+    call sdkmanager --install "sources;android-22" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+    call sdkmanager --install "build-tools;22.0.1" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1905,6 +2121,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-21;default;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-21"
+   call sdkmanager --install "sources;android-21" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+   call sdkmanager --install "build-tools;21.1.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1916,6 +2135,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-21;default;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-21"
+    call sdkmanager --install "sources;android-21" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+    call sdkmanager --install "build-tools;21.1.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1937,6 +2159,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-22;default;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-22"
+   call sdkmanager --install "sources;android-22" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+   call sdkmanager --install "build-tools;22.0.1" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -1948,6 +2173,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-22;default;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-22"
+    call sdkmanager --install "sources;android-22" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+    call sdkmanager --install "build-tools;22.0.1" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -1998,6 +2226,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-23;default;x86
    call sdkmanager "platform-tools" "platforms;android-23"
+   call sdkmanager --install "sources;android-23" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+   call sdkmanager --install "build-tools;23.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2009,6 +2240,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-23;default;x86
     call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager --install "sources;android-23" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+    call sdkmanager --install "build-tools;23.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2030,6 +2264,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-23;default;x86_64
    call sdkmanager "platform-tools" "platforms;android-23"
+   call sdkmanager --install "sources;android-23" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+   call sdkmanager --install "build-tools;23.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2041,6 +2278,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-23;default;x86_64
     call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager --install "sources;android-23" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+    call sdkmanager --install "build-tools;23.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2062,6 +2302,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-23;default;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-23"
+   call sdkmanager --install "sources;android-23" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+   call sdkmanager --install "build-tools;23.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2073,6 +2316,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-23;default;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager --install "sources;android-23" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+    call sdkmanager --install "build-tools;23.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2127,6 +2373,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-24;default;x86
    call sdkmanager "platform-tools" "platforms;android-24"
+   call sdkmanager --install "sources;android-24" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+   call sdkmanager --install "build-tools;24.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2138,6 +2387,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-24;default;x86
     call sdkmanager "platform-tools" "platforms;android-24"
+    call sdkmanager --install "sources;android-24" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+    call sdkmanager --install "build-tools;24.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2159,6 +2411,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-25;default;x86
    call sdkmanager "platform-tools" "platforms;android-25"
+   call sdkmanager --install "sources;android-25" --channel=0
+   call sdkmanager --install "build-tools;25.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2170,6 +2424,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-25;default;x86
     call sdkmanager "platform-tools" "platforms;android-25"
+    call sdkmanager --install "sources;android-25" --channel=0
+    call sdkmanager --install "build-tools;25.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2191,6 +2447,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-24;default;x86_64
    call sdkmanager "platform-tools" "platforms;android-24"
+   call sdkmanager --install "sources;android-24" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+   call sdkmanager --install "build-tools;24.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2202,6 +2461,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-24;default;x86_64
     call sdkmanager "platform-tools" "platforms;android-24"
+    call sdkmanager --install "sources;android-24" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+    call sdkmanager --install "build-tools;24.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2223,6 +2485,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-25;default;x86_64
    call sdkmanager "platform-tools" "platforms;android-25"
+   call sdkmanager --install "sources;android-25" --channel=0
+   call sdkmanager --install "build-tools;25.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2234,6 +2498,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-25;default;x86_64
     call sdkmanager "platform-tools" "platforms;android-25"
+    call sdkmanager --install "sources;android-25" --channel=0
+    call sdkmanager --install "build-tools;25.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2255,6 +2521,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-24;default;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-24"
+   call sdkmanager --install "sources;android-24" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+   call sdkmanager --install "build-tools;24.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2266,6 +2535,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-24;default;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-24"
+    call sdkmanager --install "sources;android-24" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+    call sdkmanager --install "build-tools;24.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2318,6 +2590,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-26;default;x86
    call sdkmanager "platform-tools" "platforms;android-26"
+   call sdkmanager --install "sources;android-26" --channel=0
+   call sdkmanager --install "build-tools;26.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2329,6 +2603,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-26;default;x86
     call sdkmanager "platform-tools" "platforms;android-26"
+    call sdkmanager --install "sources;android-26" --channel=0
+    call sdkmanager --install "build-tools;26.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2350,6 +2626,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-27;default;x86
    call sdkmanager "platform-tools" "platforms;android-27"
+   call sdkmanager --install "sources;android-27" --channel=0
+   call sdkmanager --install "build-tools;27.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2361,6 +2639,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-27;default;x86
     call sdkmanager "platform-tools" "platforms;android-27"
+    call sdkmanager --install "sources;android-27" --channel=0
+    call sdkmanager --install "build-tools;27.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2382,6 +2662,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-26;default;x86_64
    call sdkmanager "platform-tools" "platforms;android-26"
+   call sdkmanager --install "sources;android-26" --channel=0
+   call sdkmanager --install "build-tools;26.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2393,6 +2675,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-26;default;x86_64
     call sdkmanager "platform-tools" "platforms;android-26"
+    call sdkmanager --install "sources;android-26" --channel=0
+    call sdkmanager --install "build-tools;26.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2414,6 +2698,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-27;default;x86_64
    call sdkmanager "platform-tools" "platforms;android-27"
+   call sdkmanager --install "sources;android-27" --channel=0
+   call sdkmanager --install "build-tools;27.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2425,6 +2711,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-27;default;x86_64
     call sdkmanager "platform-tools" "platforms;android-27"
+    call sdkmanager --install "sources;android-27" --channel=0
+    call sdkmanager --install "build-tools;27.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2473,6 +2761,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-28;default;x86
    call sdkmanager "platform-tools" "platforms;android-28"
+   call sdkmanager --install "sources;android-28" --channel=0
+   call sdkmanager --install "build-tools;28.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2484,6 +2774,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-28;default;x86
     call sdkmanager "platform-tools" "platforms;android-28"
+    call sdkmanager --install "sources;android-28" --channel=0
+    call sdkmanager --install "build-tools;28.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2505,6 +2797,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-28;default;x86_64
    call sdkmanager "platform-tools" "platforms;android-28"
+   call sdkmanager --install "sources;android-28" --channel=0
+   call sdkmanager --install "build-tools;28.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2516,6 +2810,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-28;default;x86_64
     call sdkmanager "platform-tools" "platforms;android-28"
+    call sdkmanager --install "sources;android-28" --channel=0
+    call sdkmanager --install "build-tools;28.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2564,6 +2860,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-29;default;x86
    call sdkmanager "platform-tools" "platforms;android-29"
+   call sdkmanager --install "sources;android-29" --channel=0
+   call sdkmanager --install "build-tools;29.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2575,6 +2873,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-29;default;x86
     call sdkmanager "platform-tools" "platforms;android-29"
+    call sdkmanager --install "sources;android-29" --channel=0
+    call sdkmanager --install "build-tools;29.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2596,6 +2896,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-29;default;x86_64
    call sdkmanager "platform-tools" "platforms;android-29"
+   call sdkmanager --install "sources;android-29" --channel=0
+   call sdkmanager --install "build-tools;29.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2607,6 +2909,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-29;default;x86_64
     call sdkmanager "platform-tools" "platforms;android-29"
+    call sdkmanager --install "sources;android-29" --channel=0
+    call sdkmanager --install "build-tools;29.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2692,6 +2996,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-21;android-tv;x86
    call sdkmanager "platform-tools" "platforms;android-21"
+   call sdkmanager --install "sources;android-21" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+   call sdkmanager --install "build-tools;21.1.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2703,6 +3010,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-21;android-tv;x86
     call sdkmanager "platform-tools" "platforms;android-21"
+    call sdkmanager --install "sources;android-21" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+    call sdkmanager --install "build-tools;21.1.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2724,6 +3034,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-22;android-tv;x86
    call sdkmanager "platform-tools" "platforms;android-22"
+   call sdkmanager --install "sources;android-22" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+   call sdkmanager --install "build-tools;22.0.1" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2735,6 +3048,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-22;android-tv;x86
     call sdkmanager "platform-tools" "platforms;android-22"
+    call sdkmanager --install "sources;android-22" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-22" --channel=0
+    call sdkmanager --install "build-tools;22.0.1" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2756,6 +3072,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-21;android-tv;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-21"
+   call sdkmanager --install "sources;android-21" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+   call sdkmanager --install "build-tools;21.1.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2767,6 +3086,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-21;android-tv;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-21"
+    call sdkmanager --install "sources;android-21" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-21" --channel=0
+    call sdkmanager --install "build-tools;21.1.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2815,6 +3137,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-23;android-tv;x86
    call sdkmanager "platform-tools" "platforms;android-23"
+   call sdkmanager --install "sources;android-23" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+   call sdkmanager --install "build-tools;23.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2826,6 +3151,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-23;android-tv;x86
     call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager --install "sources;android-23" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+    call sdkmanager --install "build-tools;23.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2847,6 +3175,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-23;android-tv;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-23"
+   call sdkmanager --install "sources;android-23" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+   call sdkmanager --install "build-tools;23.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2858,6 +3189,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-23;android-tv;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager --install "sources;android-23" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+    call sdkmanager --install "build-tools;23.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2906,6 +3240,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-24;android-tv;x86
    call sdkmanager "platform-tools" "platforms;android-24"
+   call sdkmanager --install "sources;android-24" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+   call sdkmanager --install "build-tools;24.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -2917,6 +3254,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-24;android-tv;x86
     call sdkmanager "platform-tools" "platforms;android-24"
+    call sdkmanager --install "sources;android-24" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+    call sdkmanager --install "build-tools;24.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2932,23 +3272,29 @@ echo off &echo.&echo off
 echo off &echo.&echo off
 
 if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
- if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-24\android-tv\x86" (
+ if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-25\android-tv\x86" (
    msg %username% 'system-images android sdk already exist'
    goto nougetListTvA
  ) else (
-   call sdkmanager system-images;android-24;android-tv;x86
-   call sdkmanager "platform-tools" "platforms;android-24"
+   call sdkmanager system-images;android-25;android-tv;x86
+   call sdkmanager "platform-tools" "platforms;android-25"
+   call sdkmanager --install "sources;android-25" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-25" --channel=0
+   call sdkmanager --install "build-tools;25.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
 ) else (
-  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-24\android-tv\x86" (
+  if exist "%LOCALAPPDATA%\Android\Sdk\system-images\android-25\android-tv\x86" (
     msg %username% 'system-images android sdk already exist'
     goto nougetListTvA
   ) else (
     call sdkmanager --licenses
-    call sdkmanager system-images;android-24;android-tv;x86
-    call sdkmanager "platform-tools" "platforms;android-24"
+    call sdkmanager system-images;android-25;android-tv;x86
+    call sdkmanager "platform-tools" "platforms;android-25"
+    call sdkmanager --install "sources;android-25" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-25" --channel=0
+    call sdkmanager --install "build-tools;25.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -2997,6 +3343,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-26;android-tv;x86
    call sdkmanager "platform-tools" "platforms;android-26"
+   call sdkmanager --install "sources;android-26" --channel=0
+   call sdkmanager --install "build-tools;26.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3008,6 +3356,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-26;android-tv;x86
     call sdkmanager "platform-tools" "platforms;android-26"
+    call sdkmanager --install "sources;android-26" --channel=0
+    call sdkmanager --install "build-tools;26.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3029,6 +3379,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-27;android-tv;x86
    call sdkmanager "platform-tools" "platforms;android-27"
+   call sdkmanager --install "sources;android-27" --channel=0
+   call sdkmanager --install "build-tools;27.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3040,6 +3392,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-27;android-tv;x86
     call sdkmanager "platform-tools" "platforms;android-27"
+    call sdkmanager --install "sources;android-27" --channel=0
+    call sdkmanager --install "build-tools;27.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3086,6 +3440,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-28;android-tv;x86
    call sdkmanager "platform-tools" "platforms;android-28"
+   call sdkmanager --install "sources;android-28" --channel=0
+   call sdkmanager --install "build-tools;28.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3097,6 +3453,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-28;android-tv;x86
     call sdkmanager "platform-tools" "platforms;android-28"
+    call sdkmanager --install "sources;android-28" --channel=0
+    call sdkmanager --install "build-tools;28.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3143,6 +3501,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-29;android-tv;x86
    call sdkmanager "platform-tools" "platforms;android-29"
+   call sdkmanager --install "sources;android-29" --channel=0
+   call sdkmanager --install "build-tools;29.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3154,6 +3514,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-29;android-tv;x86
     call sdkmanager "platform-tools" "platforms;android-29"
+    call sdkmanager --install "sources;android-29" --channel=0
+    call sdkmanager --install "build-tools;29.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3233,6 +3595,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-23;android-wear;x86
    call sdkmanager "platform-tools" "platforms;android-23"
+   call sdkmanager --install "sources;android-23" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+   call sdkmanager --install "build-tools;23.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3244,6 +3609,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-23;android-wear;x86
     call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager --install "sources;android-23" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+    call sdkmanager --install "build-tools;23.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3265,6 +3633,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-23;android-wear;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-23"
+   call sdkmanager --install "sources;android-23" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+   call sdkmanager --install "build-tools;23.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3276,6 +3647,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-23;android-wear;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager --install "sources;android-23" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-23" --channel=0
+    call sdkmanager --install "build-tools;23.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3324,6 +3698,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-25;android-wear;x86
    call sdkmanager "platform-tools" "platforms;android-25"
+   call sdkmanager --install "sources;android-25" --channel=0
+   call sdkmanager --install "build-tools;25.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3335,6 +3711,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-25;android-wear;x86
     call sdkmanager "platform-tools" "platforms;android-25"
+    call sdkmanager --install "sources;android-25" --channel=0
+    call sdkmanager --install "build-tools;25.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3356,6 +3734,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-25;android-wear;armeabi-v7a
    call sdkmanager "platform-tools" "platforms;android-25"
+   call sdkmanager --install "sources;android-25" --channel=0
+   call sdkmanager --install "build-tools;25.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3367,6 +3747,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-25;android-wear;armeabi-v7a
     call sdkmanager "platform-tools" "platforms;android-25"
+    call sdkmanager --install "sources;android-25" --channel=0
+    call sdkmanager --install "build-tools;25.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3413,6 +3795,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-26;android-wear;x86
    call sdkmanager "platform-tools" "platforms;android-26"
+   call sdkmanager --install "sources;android-26" --channel=0
+   call sdkmanager --install "build-tools;26.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3423,7 +3807,10 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-26;android-wear;x86
-    call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager "platform-tools" "platforms;android-26"
+    call sdkmanager --install "sources;android-26" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-26" --channel=0
+    call sdkmanager --install "build-tools;26.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3470,6 +3857,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-28;android-wear;x86
    call sdkmanager "platform-tools" "platforms;android-28"
+   call sdkmanager --install "sources;android-28" --channel=0
+   call sdkmanager --install "build-tools;28.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3480,7 +3869,10 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-28;android-wear;x86
-    call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager "platform-tools" "platforms;android-28"
+    call sdkmanager --install "sources;android-28" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-28" --channel=0
+    call sdkmanager --install "build-tools;28.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3562,6 +3954,9 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-24;google_apis_playstore;x86
    call sdkmanager "platform-tools" "platforms;android-24"
+   call sdkmanager --install "sources;android-24" --channel=0
+   call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+   call sdkmanager --install "build-tools;24.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3572,7 +3967,10 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-24;google_apis_playstore;x86
-    call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager "platform-tools" "platforms;android-24"
+    call sdkmanager --install "sources;android-24" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-24" --channel=0
+    call sdkmanager --install "build-tools;24.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3594,6 +3992,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-25;google_apis_playstore;x86
    call sdkmanager "platform-tools" "platforms;android-25"
+   call sdkmanager --install "sources;android-25" --channel=0
+   call sdkmanager --install "build-tools;25.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3604,7 +4004,10 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
   ) else (
     call sdkmanager --licenses
     call sdkmanager system-images;android-25;google_apis_playstore;x86
-    call sdkmanager "platform-tools" "platforms;android-23"
+    call sdkmanager "platform-tools" "platforms;android-25"
+    call sdkmanager --install "sources;android-25" --channel=0
+    call sdkmanager --install "add-ons;addon-google_apis-google-25" --channel=0
+    call sdkmanager --install "build-tools;25.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3653,6 +4056,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-26;google_apis_playstore;x86
    call sdkmanager "platform-tools" "platforms;android-26"
+   call sdkmanager --install "sources;android-26" --channel=0
+   call sdkmanager --install "build-tools;26.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3664,6 +4069,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-26;google_apis_playstore;x86
     call sdkmanager "platform-tools" "platforms;android-26"
+    call sdkmanager --install "sources;android-26" --channel=0
+    call sdkmanager --install "build-tools;26.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3685,6 +4092,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-27;google_apis_playstore;x86
    call sdkmanager "platform-tools" "platforms;android-27"
+   call sdkmanager --install "sources;android-27" --channel=0
+   call sdkmanager --install "build-tools;27.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3696,6 +4105,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-27;google_apis_playstore;x86
     call sdkmanager "platform-tools" "platforms;android-27"
+    call sdkmanager --install "sources;android-27" --channel=0
+    call sdkmanager --install "build-tools;27.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3744,6 +4155,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-28;google_apis_playstore;x86
    call sdkmanager "platform-tools" "platforms;android-28"
+   call sdkmanager --install "sources;android-28" --channel=0
+   call sdkmanager --install "build-tools;28.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3755,6 +4168,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-28;google_apis_playstore;x86
     call sdkmanager "platform-tools" "platforms;android-28"
+    call sdkmanager --install "sources;android-28" --channel=0
+    call sdkmanager --install "build-tools;28.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3776,6 +4191,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-28;google_apis_playstore;x86_64
    call sdkmanager "platform-tools" "platforms;android-28"
+   call sdkmanager --install "sources;android-28" --channel=0
+   call sdkmanager --install "build-tools;28.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3787,6 +4204,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-28;google_apis_playstore;x86_64
     call sdkmanager "platform-tools" "platforms;android-28"
+    call sdkmanager --install "sources;android-28" --channel=0
+    call sdkmanager --install "build-tools;28.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3835,6 +4254,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-29;google_apis_playstore;x86
    call sdkmanager "platform-tools" "platforms;android-29"
+   call sdkmanager --install "sources;android-29" --channel=0
+   call sdkmanager --install "build-tools;29.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3846,6 +4267,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-29;google_apis_playstore;x86
     call sdkmanager "platform-tools" "platforms;android-29"
+    call sdkmanager --install "sources;android-29" --channel=0
+    call sdkmanager --install "build-tools;29.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3867,6 +4290,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-29;google_apis_playstore;x86_64
    call sdkmanager "platform-tools" "platforms;android-29"
+   call sdkmanager --install "sources;android-29" --channel=0
+   call sdkmanager --install "build-tools;29.0.3" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3878,6 +4303,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-29;google_apis_playstore;x86_64
     call sdkmanager "platform-tools" "platforms;android-29"
+    call sdkmanager --install "sources;android-29" --channel=0
+    call sdkmanager --install "build-tools;29.0.3" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3926,6 +4353,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-30;google_apis_playstore;x86
    call sdkmanager "platform-tools" "platforms;android-30"
+   call sdkmanager --install "sources;android-30" --channel=0
+   call sdkmanager --install "build-tools;30.0.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3937,6 +4366,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-30;google_apis_playstore;x86
     call sdkmanager "platform-tools" "platforms;android-30"
+    call sdkmanager --install "sources;android-30" --channel=0
+    call sdkmanager --install "build-tools;30.0.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )
@@ -3958,6 +4389,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
  ) else (
    call sdkmanager system-images;android-30;google_apis_playstore;x86_64
    call sdkmanager "platform-tools" "platforms;android-30"
+   call sdkmanager --install "sources;android-30" --channel=0
+   call sdkmanager --install "build-tools;30.0.2" --channel=0
    msg %username% 'system-images successfully to download'
    goto sdkPlatforms
   )
@@ -3969,6 +4402,8 @@ if exist "%LOCALAPPDATA%\Android\Sdk\licenses\android-sdk-license" (
     call sdkmanager --licenses
     call sdkmanager system-images;android-30;google_apis_playstore;x86_64
     call sdkmanager "platform-tools" "platforms;android-30"
+    call sdkmanager --install "sources;android-30" --channel=0
+    call sdkmanager --install "build-tools;30.0.2" --channel=0
     msg %username% 'system-images successfully to download'
     goto sdkPlatforms
   )

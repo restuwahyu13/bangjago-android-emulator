@@ -1523,7 +1523,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Android Auto API Simulators - 1.0
+echo  1. Android Auto API Simulators
 echo  0. Back
 
 echo off &echo.&echo off
@@ -1572,7 +1572,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Android Auto Desktop Head Unit Emulator - 1.1
+echo  1. Android Auto Desktop Head Unit Emulator
 echo  0. Back
 
 echo off &echo.&echo off
@@ -1621,7 +1621,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Emulator - 30.2.6
+echo  1. Emulator
 echo  0. Back
 
 echo off &echo.&echo off
@@ -1670,7 +1670,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Android Emulator Hypervisor Driver AMD - 1.6.0
+echo  1. Android Emulator Hypervisor Driver AMD
 echo  0. Back
 
 echo off &echo.&echo off
@@ -1719,7 +1719,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Android SDK Platform Tools - 30.0.5
+echo  1. Android SDK Platform Tools
 echo  0. Back
 
 echo off &echo.&echo off
@@ -1807,7 +1807,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Google Play APK Exspansion Library - 1.0
+echo  1. Google Play APK Exspansion Library
 echo  0. Back
 
 echo off &echo.&echo off
@@ -1856,7 +1856,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Google Play Instant Development SDK - 1.9.0
+echo  1. Google Play Instant Development SDK
 echo  0. Back
 
 echo off &echo.&echo off
@@ -1905,7 +1905,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Google Play Licensing Library - 1.0
+echo  1. Google Play Licensing Library
 echo  0. Back
 
 echo off &echo.&echo off
@@ -1954,7 +1954,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Google Play Services - 49
+echo  1. Google Play Services
 echo  0. Back
 
 echo off &echo.&echo off
@@ -2003,7 +2003,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Google USB Driver - 13
+echo  1. Google USB Driver
 echo  0. Back
 
 echo off &echo.&echo off
@@ -2052,7 +2052,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Google Web Driver - 2.0
+echo  1. Google Web Driver
 echo  0. Back
 
 echo off &echo.&echo off
@@ -2101,7 +2101,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Intel x86 Emulator Accelerator (HAXM) - 7.5.6
+echo  1. Intel x86 Emulator Accelerator (HAXM)
 echo  0. Back
 
 echo off &echo.&echo off
@@ -2150,7 +2150,7 @@ echo         `..   ``````   `` ``        ````  ```   `````   ```   `..`   .omM/`
 echo                                                                 `::`
 echo off &echo.&echo off
 
-echo  1. Layout Inspector Image Server for API 29-30 - 5.0
+echo  1. Layout Inspector Image Server for API 29-30
 echo  0. Back
 
 echo off &echo.&echo off
